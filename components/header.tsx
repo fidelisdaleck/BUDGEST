@@ -1,0 +1,75 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import {X, Menu, Moon, Languages, HandCoins} from "lucide-react"
+
+export default function Header() {
+  const [IsMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <header className="flex items-center justify-between px-8 py-3 shadow-lg sticky top-0 w-full bg-white z-50">
+      {/* logo */}
+      <div className="flex gap-2">
+        <HandCoins size={30} className="text-[#1E7F43]"/>
+        <Link href="/.."><h1 className="text-2xl text-[#1E7F43]">BUDGEST</h1></Link>
+      </div>
+
+      {/* Menu desktop */}
+      <nav className="hidden md:flex gap-10">
+        <Link href="../about" className="text-xl text-[#333333] hover:text-[#1E7F43] ">
+          A propos
+        </Link>
+        <Link href="../fonctionalites" className="text-xl text-[#333333] hover:text-[#1E7F43] ">
+          Fonctionalités
+        </Link>
+        <Link href="../tarification" className="text-xl text-[#333333] hover:text-[#1E7F43] ">
+          Tarification
+        </Link>
+      </nav>
+
+      {/* CTA */}
+      <div className="flex items-center gap-4">
+        <div className="bg-[#1e7f4315] rounded-full px-2 py-2 hover:bg-[#1e7f433b]"><Moon size={20} className="text-[#1E7F43]"/></div>
+        <div className="bg-[#1e7f4315] rounded-full px-2 py-2 hover:bg-[#1e7f433b]"><Languages size={20} className="text-[#1E7F43]"/></div>
+        <div className="hidden md:block">
+          <button className="bg-[#1E7F43] hover:bg-[#0f3d22] text-white font-bold py-2 px-4 rounded-full shadow-xl">
+            Se connecter
+          </button>
+        </div>
+
+        {/* Hamburger mobile */}
+        <button
+          className="md:hidden"
+          onClick={() => setIsMenuOpen(!IsMenuOpen)}
+        >
+          {IsMenuOpen ? (
+            <X className="w-6 h-6 text-[#111827]" />
+          ) : (
+            <Menu className="w-6 h-6 text-[#111827]" />
+          )}
+        </button>
+      </div>
+
+      {/* Menu Mobile */}
+      {IsMenuOpen && (
+        <div className="absolute top-full left-0 w-full px-3 py-5 bg-white shadow-md md:hidden">
+          <nav className="flex flex-col gap-10 ">
+            <Link href="../about" className="text-xl text-[#333333] hover:text-[#1E7F43] ">
+              A propos
+            </Link>
+            <Link href="../fonctionalites" className="text-xl text-[#333333] hover:text-[#1E7F43] ">
+              Fonctionalités
+            </Link>
+            <Link href="../tarification" className="text-xl text-[#333333] hover:text-[#1E7F43] ">
+              Tarification
+            </Link>
+          </nav>
+          <button className="bg-[#1E7F43] hover:bg-[#0f3d22] text-white font-bold py-2 px-4 rounded-full mt-3 shadow-xl w-full">
+            Se connecter
+          </button>
+        </div>
+      )}
+    </header>
+  );
+}

@@ -1,65 +1,227 @@
+"use client";
 import Image from "next/image";
-
-export default function Home() {
+import {
+  Wallet,
+  PiggyBank,
+  TriangleAlert,
+  Folder,
+  Calendar,
+  BarChart3,
+  Download,
+  ArrowRight
+} from "lucide-react";
+import Card from "../components/card";
+import Card1 from "../components/card1";
+export default function Acceuil() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div>
+      {/* HERO SECTION */}
+      <section className="flex md:flex-row flex-col md:items-center justify-between gap-10 px-5 md:px-15 py-10">
+        <div className="space-y-7">
+          <h1 className="text-5xl md:text-7xl text-[#1e7f43] font-bold">
+            Reprenez le contrôle de votre budget, simplement.
+          </h1>
+          <p className="text-10 md:text-xl text-[#444444] ">
+            Suivez vos revenus, analysez vos dépenses et organisez vos finances
+            grâce à une application web claire, intuitive et accompagnée d’un
+            assistant interactif.
+          </p>
+          <div className="flex gap-5">
+            <button className="bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-3 py-2md:py-3 md:px-6 rounded-full shadow-xl">
+              Commencer
+            </button>
+            <button className="bg-[#D7AD04] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#D7AD04] text-white font-bold px-3 py-2 md:py-3 md:px-6 rounded-full shadow-xl">
+              Inscrivez-vous
+            </button>
+          </div>
+        </div>
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
+          className="rounded-xl"
+          src="/images/hero.jpg"
+          alt=" Hero section image"
+          width={600}
           height={20}
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+      </section>
+
+      {/* PROBLEME */}
+      <section className=" mt-20 text-center space-y-5 px-5">
+        <h2 className="text-3xl md:text-4xl text-[#1e7f43] font-semibold">
+          Votre argent disparaît sans que vous sachiez pourquoi ?
+        </h2>
+        <p className="text-xl text-[#444444] md:px-80">
+          Entre les dépenses quotidiennes, les abonnements et les imprévus, il
+          devient difficile de garder une vision claire de son budget.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-5 md:px-20 mt-20">
+          <Card
+            icon={<Wallet size={30} className="text-[#D7AD04]" />}
+            description="Des dépenses mal controlées."
+          />
+          <Card
+            icon={<PiggyBank size={30} className="text-[#D7AD04]" />}
+            description="Peu d'économies."
+          />
+          <Card
+            icon={<TriangleAlert size={30} className="text-[#D7AD04]" />}
+            description="Une gestion stressante."
+          />
+        </div>
+      </section>
+
+      {/* SOLUTION */}
+      <section className="flex md:flex-row flex-col md:items-center justify-between gap-10 px-5 md:px-15 py-30">
+        <Image
+          className="rounded-xl"
+          src="/images/solution.jpg"
+          alt=" Hero section image"
+          width={450}
+          height={20}
+          priority
+        />
+        <div className="space-y-7">
+          <h1 className="text-2xl md:text-4xl text-[#1e7f43] font-semibold">
+            Une application pensée pour simplifier votre gestion financière.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-10 md:text-15 text-[#444444] ">
+            Notre application web vous offre tous les outils nécessaires pour
+            suivre, comprendre et organiser votre budget en un seul endroit.
           </p>
+          <p className="text-10 md:text-15 text-[#444444] ">
+            Plus besoin de fichiers compliqués ou de calculs manuels.
+          </p>
+          <p className="text-10 md:text-15 text-[#444444] ">
+            Tout est centralisé dans une interface moderne et facile à utiliser.
+          </p>
+          <div className="flex gap-5">
+            <button className="bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-3 py-2 md:py-3 md:px-6 rounded-full shadow-xl">
+              Découvrez nos solutions
+            </button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* FONCTIONALITES */}
+      <section className="text-center">
+        <h1 className="text-3xl md:text-4xl text-[#1e7f43] font-semibold">
+          Fonctionalités principales
+        </h1>
+        <p className="text-10 md:text-xl text-[#444444] mt-3">
+          Découvrez nos fonctionalités principales.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-5 md:px-20 mt-20">
+          <Card1
+            icon={<Wallet size={30} className="text-[#D7AD04]" />}
+            title="Gérez vos revenus et dépenses facilement"
+            description="Ajoutez, modifiez ou supprimez vos transactions en quelques clics et gardez un suivi précis de votre situation financière."
+          />
+          <Card1
+            icon={<Folder size={30} className="text-[#D7AD04]" />}
+            title="Organisez vos dépenses intelligemment"
+            description="Classez vos dépenses par catégories pour identifier rapidement où va votre argent."
+          />
+          <Card1
+            icon={<Calendar size={30} className="text-[#D7AD04]" />}
+            title="Fixez votre budget"
+            description="Définissez des limites de dépenses et gardez le contrôle tout au long du mois."
+          />
+          <Card1
+            icon={<BarChart3 size={30} className="text-[#D7AD04]" />}
+            title="Visualisez vos finances en un coup d'œil"
+            description="graphiques mensuels,
+            analyse par catégorie,
+            suivi de l’évolution de votre budget."
+          />
+          <Card1
+            icon={<Download size={30} className="text-[#D7AD04]" />}
+            title="Exportez vos données quand vous voulez"
+            description="Téléchargez vos informations financières en PDF ou Excel pour vos archives ou analyses personnelles."
+          />
         </div>
-      </main>
+      </section>
+
+      {/* COMMENT CA MARCHE: Timeline */}
+      <section className="py-20 mt-20 space-y-15 z-0">
+        <div className="text-center space-y-3">
+          <h1 className="text-3xl md:text-4xl  text-[#1e7f43] font-semibold">
+            Comment ca marche?
+          </h1>
+          <p className="text-xl text-[#444444]">Suivez nos étapes pour obtimiser votre utilisation.</p>
+        </div>
+        <div className="relative ml-5 md:ml-20 pl-12 border-l-3 pr-10 md:pr-50  border-[#1e7f43] space-y-16">
+
+          {/* ITEM */}
+          <div className="relative mx-auto">
+            <div
+              className="absolute -left-20 top-6 w-8 h-8 rounded-full 
+              border-2 border-[#333333] bg-white flex items-center justify-center"
+            >
+              <span className="text-[#1e7f43] font-bold">1</span>
+            </div>
+
+            <div className="bg-[#1e7f4315] rounded-xl p-8 hover:bg-[#1e7f4330] transition">
+              <h2 className="text-xl font-semibold text-[#333333] mb-3">
+                Créez votre compte
+              </h2>
+              <p className="text-gray-500">Inscription rapide et sécurisée.</p>
+            </div>
+          </div>
+
+          {/* ITEM */}
+          <div className="relative">
+            <div
+              className="absolute -left-20 top-6 w-8 h-8 rounded-full 
+              border-2 border-[#333333] bg-white flex items-center justify-center"
+            >
+              <span className="text-[#1e7f43] font-bold">2</span>
+            </div>
+
+            <div className="bg-[#1e7f4315] rounded-xl p-8 hover:bg-[#1e7f4330] transition">
+              <h2 className="text-xl font-semibold text-[#333333] mb-3">
+                Ajoutez vos transactions
+              </h2>
+              <p className="text-gray-500">
+                Enregistrez revenus et dépenses facilement.
+              </p>
+            </div>
+          </div>
+
+          {/* ITEM */}
+          <div className="relative">
+            <div
+              className="absolute -left-20 top-6 w-8 h-8 rounded-full 
+              border-2 border-[#333333] bg-white flex items-center justify-center"
+            >
+              <span className="text-[#1e7f43] font-bold">3</span>
+            </div>
+
+            <div className="bg-[#1e7f4315] rounded-xl p-8 hover:bg-[#1e7f4330] transition">
+              <h2 className="text-xl font-semibold  mb-3">
+                Analysez votre budget
+              </h2>
+              <p className="text-gray-500">
+                Consultez vos graphiques et échangez avec le chatbot pour mieux comprendre vos finances.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LAST CTA */}
+      <section className="text-center py-20 bg-gray-200 space-y-10">
+        <div className="space-y-3">
+          <h1 className="text-3xl md:text-6xl text-[#1e7f43] font-semibold">Pret à mieux gérer votre argent ?</h1>
+          <p className="text-xl text-[#444444]">Commencez dès aujourd’hui et transformez votre manière de suivre vos finances.</p>
+
+        </div>
+        <div className="flex items-center justify-center">
+          <button className="flex gap-2 bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl">
+            Créer mon compte gratuitement
+            <ArrowRight size={20}/>
+          </button>
+        </div>
+      </section>
     </div>
   );
 }
