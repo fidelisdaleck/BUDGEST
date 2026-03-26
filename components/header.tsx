@@ -33,9 +33,11 @@ export default function Header() {
         <div className="bg-[#1e7f4315] rounded-full px-2 py-2 hover:bg-[#1e7f433b]"><Moon size={20} className="text-[#1E7F43]"/></div>
         <div className="bg-[#1e7f4315] rounded-full px-2 py-2 hover:bg-[#1e7f433b]"><Languages size={20} className="text-[#1E7F43]"/></div>
         <div className="hidden md:block">
-          <button className="bg-[#1E7F43] hover:bg-[#0f3d22] text-white font-bold py-2 px-4 rounded-full shadow-xl">
-            Se connecter
-          </button>
+          <Link href="../connexion">
+            <button className="bg-[#1E7F43] hover:bg-[#0f3d22] text-white font-bold py-2 px-4 rounded-full shadow-xl">
+              Se connecter
+            </button>
+          </Link>
         </div>
 
         {/* Hamburger mobile */}
@@ -65,9 +67,11 @@ export default function Header() {
               Tarification
             </Link>
           </nav>
-          <button className="bg-[#1E7F43] hover:bg-[#0f3d22] text-white font-bold py-2 px-4 rounded-full mt-3 shadow-xl w-full">
-            Se connecter
-          </button>
+            <Link href="../connexion">
+            <button className="bg-[#1E7F43] hover:bg-[#0f3d22] text-white font-bold py-2 px-4 rounded-full w-full shadow-xl">
+              Se connecter
+            </button>
+          </Link>
         </div>
       )}
     </header>

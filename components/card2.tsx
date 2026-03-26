@@ -1,11 +1,12 @@
 "use client";
-import { motion } from "motion/react"
 
+import { motion } from "motion/react"
 import {ReactNode} from "react"
 interface card1Props {
   icon: ReactNode;
   title:string;
   description: string;
+  className?: string;
 }
 
 export default function Card1({ title, icon, description }: card1Props) {

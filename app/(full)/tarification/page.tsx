@@ -1,4 +1,5 @@
 import { Package, Crown, Check, ArrowRight } from "lucide-react";
+import Link from "next/link"
 export default function Tarification() {
   return (
     <div>
@@ -16,7 +17,7 @@ export default function Tarification() {
       {/* NOS OFFRES */}
       <section className="mt-30">
         <div className=" grid md:grid-cols-2 grid-cols-1 gap-10 px-10">
-          <div className="border border-gray-500 space-y-10 px-5 py-10 shadow-lg rounded-xl">
+          <div className=" space-y-10 px-10 py-10 shadow-lg rounded-xl">
             <div className="bg-[#1e7f4318] hover:bg-[#1e7f4333] rounded-full w-15 h-15 flex items-center justify-center">
               <Package size={30} className="text-[#D7AD04]" />
             </div>
@@ -30,9 +31,12 @@ export default function Tarification() {
                 <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Export PDF / Excel</div>
                 <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Chatbot d’assistance</div>
             </div>
+            <button className="bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-3 py-2 md:py-3 md:px-6 rounded-lg shadow-xl">
+              Essayer gratuitement
+            </button>
           </div>
 
-          <div className="border border-gray-500 space-y-10 px-5 py-10 shadow-lg rounded-xl">
+          <div className="space-y-10 px-10 py-10 shadow-lg rounded-xl border border-green-300">
             <div className="bg-[#1e7f4318] hover:bg-[#1e7f4333] rounded-full w-15 h-15 flex items-center justify-center">
               <Crown size={30} className="text-[#D7AD04]" />
             </div>
@@ -51,6 +55,9 @@ export default function Tarification() {
                 <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Personnalisation dashboard</div>
                 <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Support prioritaire</div>
             </div>
+            <button className="bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-3 py-2 md:py-3 md:px-6 rounded-lg shadow-xl">
+              Essayer le premium
+            </button>
           </div>
         </div>
       </section>
@@ -71,10 +78,12 @@ export default function Tarification() {
 
         </div>
         <div className="flex items-center justify-center">
-          <button className="flex gap-2 bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl">
-            Créer mon compte
-            <ArrowRight size={20}/>
-          </button>
+          <Link href="../inscription">
+            <button className="flex gap-2 bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl">
+              Créer mon compte
+              <ArrowRight size={20} />
+            </button>
+          </Link>
         </div>
       </section>
     </div>

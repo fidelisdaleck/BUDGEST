@@ -7,7 +7,8 @@ import {
   ListPlus,
   Folder,
   ChartLine,
-} from "lucide-react";
+} from "lucide-react"
+import Link from "next/link"
 
 export default function Fonctionalites() {
   return (
@@ -95,10 +96,12 @@ export default function Fonctionalites() {
 
         </div>
         <div className="flex items-center justify-center">
-          <button className="flex gap-2 bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl">
-            Créer mon compte gratuitement
-            <ArrowRight size={20}/>
-          </button>
+          <Link href="../inscription">
+            <button className="flex gap-2 bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl">
+              Créer mon compte gratuitement
+              <ArrowRight size={20} />
+            </button>
+          </Link>
         </div>
         </section>
     </div>
