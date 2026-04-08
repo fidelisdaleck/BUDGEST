@@ -21,7 +21,7 @@ export default function Exportation() {
       </section>
 
       {/* POURQUOI NOUS CHOISIR? */}
-      <section className="mt-20 px-10 flex items-center justify-center gap-20">
+      <section className="mt-20 px-10 flex md:flex-row flex-col items-center justify-center gap-20">
         <div className="space-y-5">
           <h1 className="text-xl md:text-3xl text-[#333333]">
             Pourquoi exporter vos données ?

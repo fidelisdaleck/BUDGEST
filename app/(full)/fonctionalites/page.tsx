@@ -15,7 +15,7 @@ export default function Fonctionalites() {
     <div>
       {/* BANNER */}
       <section className="mt-20 text-center space-y-3 px-5">
-        <h1 className="text-[#333333] md:text-6xl text-4xl">
+        <h1 className="text-[#333333] md:text-6xl text-5xl">
           Des outils pensés pour simplifier votre gestion budgétaire
         </h1>
         <p className="text-gray-500 text-10 md:text-xl">
@@ -26,7 +26,7 @@ export default function Fonctionalites() {
       </section>
 
       {/* NOS FONCTIONALITES */}
-      <section className="mt-30 grid md:grid-cols-3 grid-cols-1 gap-10 md:gap-15 px-10 mb-10">
+      <section className="mt-30 grid md:grid-cols-2 grid-cols-1 gap-10 md:gap-15 px-10 mb-10">
         <Card2
           icon={<LogIn size={30} className="text-[#D7AD04]" />}
           title="Inscription et connexion sécurisées"

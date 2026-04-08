@@ -74,7 +74,7 @@ export default function Header() {
             <Link href="/fonctionalites" className={navLinkClass("/fonctionalites")}>
               Fonctionalités
             </Link>
-            <Link href="/tarification" className={navLinkClass("/about")}>
+            <Link href="/tarification" className={navLinkClass("/tarification")}>
               Tarification
             </Link>
           </nav>
