@@ -129,7 +129,7 @@ export default function Acceuil() {
           <p className="text-10 md:text-xl text-[#444444] mt-3">
             Découvrez nos fonctionalités principales.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-5 md:px-20 mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-5 md:px-20 mt-20">
             <Card1
               icon={<Wallet size={30} className="text-[#D7AD04]" />}
               title="Gérez vos revenus et dépenses facilement"
@@ -174,7 +174,7 @@ export default function Acceuil() {
             {/* ITEM */}
             <div className="relative mx-auto">
               <div
-                className="absolute -left-20 top-6 w-8 h-8 rounded-full 
+                className="absolute -left-22 top-10 w-8 h-8 rounded-full 
               border-2 border-[#333333] bg-white flex items-center justify-center"
               >
                 <span className="text-[#1e7f43] font-bold">1</span>
@@ -193,7 +193,7 @@ export default function Acceuil() {
             {/* ITEM */}
             <div className="relative">
               <div
-                className="absolute -left-20 top-6 w-8 h-8 rounded-full 
+                className="absolute -left-22 top-10 w-8 h-8 rounded-full 
               border-2 border-[#333333] bg-white flex items-center justify-center"
               >
                 <span className="text-[#1e7f43] font-bold">2</span>
@@ -212,7 +212,7 @@ export default function Acceuil() {
             {/* ITEM */}
             <div className="relative">
               <div
-                className="absolute -left-20 top-6 w-8 h-8 rounded-full 
+                className="absolute -left-22 top-10 w-8 h-8 rounded-full 
               border-2 border-[#333333] bg-white flex items-center justify-center"
               >
                 <span className="text-[#1e7f43] font-bold">3</span>
