@@ -127,7 +127,7 @@ export default function About() {
       </section>
 
       {/* LAST CTA */}
-      <section className="mt-30 text-center py-20 bg-gray-200 space-y-10">
+      <section className="mt-30 text-center py-20 bg-[#1e7f4313] space-y-10">
         <div className="space-y-3">
           <h1 className="text-3xl md:text-6xl text-[#1e7f43] font-semibold">
             Découvrez l’application en pratique

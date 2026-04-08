@@ -1,3 +1,4 @@
+"use client";
 import {
   Sidebar,
   SidebarHeader,
@@ -5,6 +6,7 @@ import {
   SidebarFooter,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   HandCoins,
   LayoutDashboard,
@@ -17,6 +19,15 @@ import {
 } from "lucide-react";
 
 export default function AppSidebar() {
+
+  const pathname = usePathname();
+  const navLinkClass = (path: string) =>
+    `text-lg px-4 py-1 flex gap-2 rounded-lg transition-all duration-100
+    ${
+      pathname === path
+        ? "bg-[#1e7f4315] text-[#1E7F43]"
+        : "text-[#333333] hover:text-[#1E7F43] hover:bg-[#1e7f430d]"
+    }`;
   return (
     <Sidebar>
       <SidebarHeader>
@@ -30,36 +41,36 @@ export default function AppSidebar() {
 
       <SidebarContent className="space-y-5 mt-10">
         <Link
-          href="../dashboard"
-          className="text-xl text-[#333333] hover:text-[#1E7F43] flex gap-2"
+          href="/dashboard"
+          className={navLinkClass("/dashboard")}
         >
           <LayoutDashboard size={25} className="text-[#D7AD04]" />
           Tableau de Bord
         </Link>
         <Link
-          href="../dashboard/depense"
-          className="text-xl text-[#333333] hover:text-[#1E7F43]  flex gap-2"
+          href="/dashboard/depense"
+          className={navLinkClass("/dashboard/depense")}
         >
           <Receipt size={25} className="text-[#D7AD04]" />
           Depenses & Revenus
         </Link>
         <Link
-          href="../dashboard/exportation"
-          className="text-xl text-[#333333] hover:text-[#1E7F43]  flex gap-2"
+          href="/dashboard/exportation"
+          className={navLinkClass("/dashboard/exportation")}
         >
           <Download size={25} className="text-[#D7AD04]" />
           Exportation
         </Link>
         <Link
-          href="n"
-          className="text-xl text-[#333333] hover:text-[#1E7F43]  flex gap-2"
+          href="/dashboard/statistiques"
+          className={navLinkClass("/dashboard/statistiques")}
         >
           <ChartLine size={25} className="text-[#D7AD04]" />
           Statistiques
         </Link>
         <Link
-          href="n"
-          className="text-xl text-[#333333] hover:text-[#1E7F43]  flex gap-2"
+          href="/dashboard/chatbot"
+          className={navLinkClass("/dashboard/chatbot")}
         >
           <BotMessageSquare size={25} className="text-[#D7AD04]" />
           Chatbot
@@ -67,15 +78,15 @@ export default function AppSidebar() {
       </SidebarContent>
       <SidebarFooter>
         <Link
-          href="n"
-          className="text-xl text-[#333333] hover:text-[#1E7F43]  flex gap-2"
+          href="/dashboard/profil"
+          className={navLinkClass("/dashboard/profil")}
         >
           <User size={25} className="text-[#D7AD04]" />
           Profil
         </Link>
         <Link
-          href="n"
-          className="text-xl text-[#333333] hover:text-[#1E7F43]  flex gap-2"
+          href="/dashboard/deconnexion"
+          className={navLinkClass("/dashboard/deconnexion")}
         >
           <LogOut size={25} className="text-[#d70404]" />
           Deconnexion

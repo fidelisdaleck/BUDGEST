@@ -2,10 +2,21 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import {X, Menu, Moon, Languages, HandCoins} from "lucide-react"
 
 export default function Header() {
   const [IsMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const navLinkClass = (path: string) =>
+    `text-xl px-4 py-2 rounded-lg transition-all duration-100
+    ${
+      pathname === path
+        ? "bg-[#1e7f4315] text-[#1E7F43]"
+        : "text-[#333333] hover:text-[#1E7F43] hover:bg-[#1e7f430d]"
+    }`;
+
 
   return (
     <header className="flex items-center justify-between px-8 py-3 shadow-lg sticky top-0 w-full bg-white z-50">
@@ -17,13 +28,13 @@ export default function Header() {
 
       {/* Menu desktop */}
       <nav className="hidden md:flex gap-10">
-        <Link href="../about" className="text-xl text-[#333333] hover:text-[#1E7F43] ">
+        <Link href="/about" className={navLinkClass("/about")}>
           A propos
         </Link>
-        <Link href="../fonctionalites" className="text-xl text-[#333333] hover:text-[#1E7F43] ">
+        <Link href="/fonctionalites" className={navLinkClass("/fonctionalites")}>
           Fonctionalités
         </Link>
-        <Link href="../tarification" className="text-xl text-[#333333] hover:text-[#1E7F43] ">
+        <Link href="/tarification" className={navLinkClass("/tarification")}>
           Tarification
         </Link>
       </nav>
@@ -57,13 +68,13 @@ export default function Header() {
       {IsMenuOpen && (
         <div className="absolute top-full left-0 w-full px-3 py-5 bg-white shadow-md md:hidden">
           <nav className="flex flex-col gap-10 ">
-            <Link href="../about" className="text-xl text-[#333333] hover:text-[#1E7F43] ">
+            <Link href="/about" className={navLinkClass("/about")}>
               A propos
             </Link>
-            <Link href="../fonctionalites" className="text-xl text-[#333333] hover:text-[#1E7F43] ">
+            <Link href="/fonctionalites" className={navLinkClass("/fonctionalites")}>
               Fonctionalités
             </Link>
-            <Link href="../tarification" className="text-xl text-[#333333] hover:text-[#1E7F43] ">
+            <Link href="/tarification" className={navLinkClass("/about")}>
               Tarification
             </Link>
           </nav>

@@ -1,8 +1,6 @@
 "use client";
 import { Wallet, TrendingUp, TrendingDown, Target, Plus, Download } from "lucide-react";
-import Chart from "@/components/chartTemp";
 import Input from "@/components/input";
-import PieChart from "@/components/PieChart";
 
 export default function Dashboard() {
   return (
@@ -47,26 +45,6 @@ export default function Dashboard() {
           <div className="flex gap-2"><Target size={30} className="text-[#D7AD04]"/><h1 className="text-2xl text-[#1e7f43]">Budget restant</h1></div>
           <p className="text-[#333333] text-10">Votre budget encore disponible</p>
           <p className="text-[#1e507f] text-xl">190 000 Fcfa</p>
-        </div>
-      </section>
-
-      {/* DIAGRAMME */}
-      <section className="mt-20">
-        <div className="mb-15 text-center space-y-3">
-          <h1 className="text-4xl text-[#1e7f43]">Évolution de votre budget</h1>
-          <p className="text-xl text-[#444444]">Visualisez l’évolution de vos revenus et dépenses au fil du temps pour mieux comprendre votre situation financière.</p>
-        </div>
-        <div className=" grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div className="space-y-10  md:mb-10 ">
-            <h1 className="text-3xl text-[#333333]">Répartition des revenus</h1>
-            <Chart/>
-          </div>
-          <div className="space-y-10">
-            <h2 className="text-3xl text-[#333333]">
-              Répartition des dépenses
-            </h2>
-            <div className="w-64 h-64 mx-auto"><PieChart/></div>
-          </div>
         </div>
       </section>
 

@@ -51,7 +51,7 @@ export default function Acceuil() {
           className="md:w-500 cursor-pointer"
         >
           <Image
-            className="rounded-xl"
+            className="rounded-xl w-full"
             src="/images/hero.jpg"
             alt=" Hero section image"
             width={600}
@@ -229,7 +229,7 @@ export default function Acceuil() {
       </section>
 
       {/* LAST CTA */}
-      <section className="text-center py-20 bg-gray-200 space-y-10">
+      <section className="text-center py-20 bg-[#1e7f4313] space-y-10">
         <div className="space-y-3">
           <h1 className="text-3xl md:text-6xl text-[#1e7f43] font-semibold">
             Pret à mieux gérer votre argent ?

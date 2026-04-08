@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
-import { Check } from "lucide-react";
+import Link from "next/link"
+import { Check, Download } from "lucide-react";
 
 export default function Exportation() {
   return (
-    <div className="px-10">
+    <div className="">
       {/* HERO SECTION */}
-      <section>
+      <section className="px-10">
         <div className=" text-center space-y-3">
           <h1 className="text-2xl md:text-4xl text-[#1e7f43]">
             Exportez vos données financières en un clic
@@ -20,7 +21,7 @@ export default function Exportation() {
       </section>
 
       {/* POURQUOI NOUS CHOISIR? */}
-      <section className="mt-20 flex items-center justify-center gap-20">
+      <section className="mt-20 px-10 flex items-center justify-center gap-20">
         <div className="space-y-5">
           <h1 className="text-xl md:text-3xl text-[#333333]">
             Pourquoi exporter vos données ?
@@ -68,6 +69,25 @@ export default function Exportation() {
             height={20}
             priority
           />
+        </div>
+      </section>
+
+      {/* LAST CTA */}
+      <section className="mt-10 text-center py-20 bg-[#1e7f4313] space-y-10">
+        <div className="space-y-3">
+          <h1 className="text-3xl md:text-6xl text-[#1e7f43] font-semibold">
+            Génère ton rapport financier maintenant
+          </h1>
+          <p className="text-xl text-[#444444]">
+            Le téléchargement démarre automatiquement après la génération du rapport.
+          </p>
+        </div>
+        <div className="flex items-center justify-center">
+          <Link href="../inscription">
+            <button className="flex gap-2 bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl">
+              <Download size={20} />Exporter en PDF
+            </button>
+          </Link>
         </div>
       </section>
     </div>

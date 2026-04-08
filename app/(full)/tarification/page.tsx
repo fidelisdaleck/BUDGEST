@@ -41,7 +41,7 @@ export default function Tarification() {
               <Crown size={30} className="text-[#D7AD04]" />
             </div>
             <div className="space-y-3">
-                <h1 className="text-3xl text-[#1e7f43]">Offre Premium — Pro</h1>
+                <h1 className="text-3xl text-[#1e7f43]">Offre Premium — 2500 Fcfa/Mois</h1>
                 <p className="text-10 text-[#444444]">Pour une gestion budgétaire plus avancée et personnalisée</p>
             </div>
             <div className="space-y-3">
@@ -71,7 +71,7 @@ export default function Tarification() {
       </section>
 
       {/* LAST CTA */}
-      <section className="mt-20 text-center px-10 py-20 bg-gray-200 space-y-10">
+      <section className="mt-20 text-center px-10 py-20 bg-[#1e7f4313] space-y-10">
         <div className="space-y-3">
           <h1 className="text-3xl md:text-6xl text-[#1e7f43] font-semibold">Commencez gratuitement, évoluez quand vous voulez</h1>
           <p className="text-xl text-[#444444]">Testez l’application sans engagement et passez à Premium uniquement si vous en ressentez le besoin.</p>
