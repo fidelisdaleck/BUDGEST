@@ -10,7 +10,7 @@ import {
 export default function Footer() {
   return (
     <footer className="px-10 py-15 bg-[#0e3d20] cursor-pointer text-white">
-      <div className="flex md:items-center justify-between gap-7 sm:flex-row flex-col">
+      <div className="flex md:items-center justify-between gap-7 md:flex-row flex-col">
         <div>
           <div className="flex gap-2">
             <HandCoins size={30} className="text-[#1E7F43]" />

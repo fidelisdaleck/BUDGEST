@@ -15,7 +15,7 @@ export default function About() {
     <div>
       <div className="px-5">
         {/* BANNER */}
-        <section className="mt-20 text-center space-y-3">
+        <section className="mt-30 text-center space-y-3">
           <h1 className="text-[#333333] md:text-6xl text-5xl">
             A propos de nous, <span className="text-[#1e7f43]">BUDGEST</span>
           </h1>
@@ -26,56 +26,58 @@ export default function About() {
 
         {/* POURQUOI AVONS NOUS CREER */}
 
-        <section className="mt-30 flex lg:flex-row flex-col lg:items-center justify-between lg:gap-20 gap-10 px-5">
-          <div className="space-y-5">
-            <h2 className="text-[#1e7f43] md:text-5xl text-2xl">
-              Pourquoi avons-nous créé cette application ?
-            </h2>
-            <p className="text-[#444444] text-10 md:text-xl">
-              La gestion du budget personnel reste un défi pour de nombreuses
-              personnes. Entre les dépenses quotidiennes, les abonnements et les
-              imprévus, il devient difficile de garder une vision claire de sa
-              situation financière.
-            </p>
+        <section className="mt-30 space-y-20 lg:px-15 px-5">
+          <h2 className="text-center text-[#1e7f43] lg:text-5xl text-4xl">
+            Pourquoi avons-nous créé cette application ?
+          </h2>
+          <div className="flex lg:flex-row flex-col lg:items-center justify-between lg:gap-20 gap-10 px-5">
+            <div className="space-y-5">
+              <p className="text-[#444444] text-10 md:text-xl">
+                La gestion du budget personnel reste un défi pour de nombreuses
+                personnes. Entre les dépenses quotidiennes, les abonnements et
+                les imprévus, il devient difficile de garder une vision claire
+                de sa situation financière.
+              </p>
 
-            <p className="text-[#444444] text-10 md:text-xl">
-              Ce projet est né d’un constat simple : les outils existants sont
-              souvent trop complexes ou peu adaptés aux besoins réels des
-              utilisateurs. Nous avons donc conçu une application web qui met
-              l’accent sur :
-            </p>
-            <div className="text-[#444444] text-10 md:text-xl">
-              <div className="flex gap-2">
-                <Check size={20} className="text-[#1e7f43]" />
-                La simplicité d’utilisation.{" "}
+              <p className="text-[#444444] text-10 md:text-xl">
+                Ce projet est né d’un constat simple : les outils existants sont
+                souvent trop complexes ou peu adaptés aux besoins réels des
+                utilisateurs. Nous avons donc conçu une application web qui met
+                l’accent sur :
+              </p>
+              <div className="text-[#444444] text-10 md:text-xl">
+                <div className="flex gap-2">
+                  <Check size={20} className="text-[#1e7f43]" />
+                  La simplicité d’utilisation.{" "}
+                </div>
+                <div className="flex gap-2">
+                  <Check size={20} className="text-[#1e7f43]" />
+                  La clarté des informations financières.
+                </div>
+                <div className="flex gap-2">
+                  <Check size={20} className="text-[#1e7f43]" />
+                  Un accompagnement accessible directement dans l’application.
+                </div>
               </div>
-              <div className="flex gap-2">
-                <Check size={20} className="text-[#1e7f43]" />
-                La clarté des informations financières.
-              </div>
-              <div className="flex gap-2">
-                <Check size={20} className="text-[#1e7f43]" />
-                Un accompagnement accessible directement dans l’application.
-              </div>
+
+              <p className="text-[#444444] text-10 md:text-xl">
+                Notre objectif est d’offrir une solution pratique permettant à
+                chacun de reprendre le contrôle de ses finances sans difficulté.
+              </p>
             </div>
-
-            <p className="text-[#444444] text-10 md:text-xl">
-              Notre objectif est d’offrir une solution pratique permettant à
-              chacun de reprendre le contrôle de ses finances sans difficulté.
-            </p>
+            <Image
+              className="rounded-xl"
+              src="/images/about1.jpg"
+              alt=" Hero section image"
+              width={500}
+              height={20}
+              priority
+            />
           </div>
-          <Image
-            className="rounded-xl"
-            src="/images/about1.jpg"
-            alt=" Hero section image"
-            width={500}
-            height={20}
-            priority
-          />
         </section>
 
         {/* NOS VALEURS */}
-        <section className="mt-30 grid md:grid-cols-2 grid-cols-1 gap-10 md:gap-15">
+        <section className="mt-30 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 lg:px-15 px-5">
           <Card2
             icon={<Rocket size={30} className="text-[#D7AD04]" />}
             title="Notre mission"

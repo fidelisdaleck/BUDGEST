@@ -89,7 +89,7 @@ export default function Fonctionalites() {
       </section>
 
       {/* LAST CTA */}
-      <section className="mt-30 text-center py-20 bg-[#1e7f4313] space-y-10">
+      <section className="mt-30 text-center py-20 px-10 bg-[#1e7f4313] space-y-10">
         <div className="space-y-3">
           <h1 className="text-3xl md:text-6xl text-[#1e7f43] font-semibold">Prenez le contrôle de votre budget dès aujourd’hui</h1>
           <p className="text-xl text-[#444444]">Découvrez toutes les fonctionnalités et commencez à organiser vos finances simplement.</p>
