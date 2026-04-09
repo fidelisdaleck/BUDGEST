@@ -70,7 +70,7 @@ export default function Header() {
       {/* Menu Mobile */}
       {IsMenuOpen && (
         <div className="absolute top-full left-0 w-full px-3 py-5 bg-white shadow-md md:hidden">
-          <nav className="flex flex-col gap-10 ">
+          <nav className="flex flex-col gap-5 ">
             <Link href="/" className={navLinkClass("/")}>
               Acceuil
           </Link>
