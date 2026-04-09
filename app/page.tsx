@@ -23,7 +23,7 @@ export default function Acceuil() {
       <Header />
       <div className="px-5 md:px-2">
         {/* HERO SECTION */}
-        <section className="flex lg:flex-row flex-col lg:items-center justify-between gap-10 px-5 md:px-10 py-10 w-full">
+        <section className="mt-10 flex lg:flex-row flex-col lg:items-center justify-between gap-10 px-5 md:px-10 py-10 w-full">
           <div className="space-y-7">
             <h1 className="text-5xl md:text-7xl text-[#1e7f43] font-bold">
               Reprenez le contrôle de votre budget, simplement.
@@ -52,10 +52,10 @@ export default function Acceuil() {
             className="md:w-500 cursor-pointer"
           >
             <Image
-              className="rounded-xl"
+              className="rounded-xl w-full"
               src="/images/hero.jpg"
               alt=" Hero section image"
-              width={700}
+              width={500}
               height={20}
               priority
             />
@@ -92,36 +92,38 @@ export default function Acceuil() {
           <h1 className="text-center text-2xl md:text-4xl text-[#1e7f43] font-semibold">
             Une application pensée pour simplifier votre gestion financière.
           </h1>
-          <div className="flex lg:flex-row flex-col lg:items-center justify-between gap-10 lg:px-15 py-30">
-            <div className="space-y-7 ">
-              <p className="text-10 md:text-15 text-[#444444] ">
+          <div className="space-y-10 flex lg:flex-row flex-col gap-10 lg:items-center justify-between lg:px-15 py-10 md:py-20">
+            <div className="space-y-7 md:w-1/2">
+              <p className="text-10 md:text-xl text-[#444444] ">
                 Notre application web vous offre tous les outils nécessaires
                 pour suivre, comprendre et organiser votre budget en un seul
                 endroit.
               </p>
-              <p className="text-10 md:text-15 text-[#444444] ">
+              <p className="text-10 md:text-xl text-[#444444] ">
                 Plus besoin de fichiers compliqués ou de calculs manuels.
               </p>
-              <p className="text-10 md:text-15 text-[#444444] ">
+              <p className="text-10 md:text-xl text-[#444444] ">
                 Tout est centralisé dans une interface moderne et facile à
                 utiliser.
               </p>
               <div className="flex gap-5">
-                <Link href="../fonctionalites">
+                <Link href="/fonctionalites">
                   <button className="bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-3 py-2 md:py-3 md:px-6 rounded-full shadow-xl">
                     Découvrez nos solutions
                   </button>
                 </Link>
               </div>
             </div>
-            <Image
-              className="rounded-xl"
+            <div className="md:w-1/2">
+              <Image
+              className="rounded-xl w-full"
               src="/images/solution.jpg"
               alt=" Hero section image"
-              width={450}
+              width={400}
               height={20}
               priority
-            />
+              />
+            </div>
           </div>
         </section>
 

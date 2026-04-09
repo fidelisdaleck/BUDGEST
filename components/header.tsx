@@ -23,11 +23,14 @@ export default function Header() {
       {/* logo */}
       <div className="flex gap-2">
         <HandCoins size={30} className="text-[#1E7F43]"/>
-        <Link href="/.."><h1 className="text-2xl text-[#1E7F43]">BUDGEST</h1></Link>
+        <Link href="/"><h1 className="text-2xl text-[#1E7F43]">BUDGEST</h1></Link>
       </div>
 
       {/* Menu desktop */}
       <nav className="hidden md:flex gap-10">
+        <Link href="/" className={navLinkClass("/")}>
+          Acceuil
+        </Link>
         <Link href="/about" className={navLinkClass("/about")}>
           A propos
         </Link>
@@ -68,6 +71,9 @@ export default function Header() {
       {IsMenuOpen && (
         <div className="absolute top-full left-0 w-full px-3 py-5 bg-white shadow-md md:hidden">
           <nav className="flex flex-col gap-10 ">
+            <Link href="/" className={navLinkClass("/")}>
+              Acceuil
+          </Link>
             <Link href="/about" className={navLinkClass("/about")}>
               A propos
             </Link>
