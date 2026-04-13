@@ -54,7 +54,7 @@ export default function Header() {
             : (<Moon size={20} className="text-[#1E7F43]"/>)}
           </button>
 
-          <div className="bg-[#1e7f4315] rounded-full px-2 py-2 hover:bg-[#1e7f433b]"><Languages size={20} className="text-[#1E7F43]"/></div>
+          <div className="bg-[#d7ad0415] rounded-full px-2 py-2 hover:bg-[#d7ad043b]"><Languages size={20} className="text-[#997800]"/></div>
         <div className="hidden md:block">
           <Link href="../connexion">
             <button className="bg-[#1E7F43] hover:bg-[#0f3d22] text-white font-bold py-2 px-4 rounded-full shadow-xl">

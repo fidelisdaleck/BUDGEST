@@ -25,8 +25,8 @@ export default function Acceuil() {
         {/* HERO SECTION */}
         <section className="mt-10 flex lg:flex-row flex-col lg:items-center justify-between gap-10 px-5 md:px-10 py-10 w-full">
           <div className="space-y-7">
-            <h1 className="text-5xl md:text-7xl text-[#1e7f43] dark:text-[#3ac971] font-bold">
-              Reprenez le contrôle de votre budget, simplement.
+            <h1 className="text-5xl md:text-7xl text-[#1e7f43] dark:text-white font-bold">
+              Reprenez le contrôle de votre <span className="dark:text-[#1e7f43]">budgest</span>, simplement.
             </h1>
             <p className="text-10 md:text-xl text-[#444444] dark:text-[#777777]">
               Suivez vos revenus, analysez vos dépenses et organisez vos
@@ -174,7 +174,7 @@ export default function Acceuil() {
         {/* COMMENT CA MARCHE: Timeline */}
         <section className="py-20 mt-20 space-y-15 z-0">
           <div className="text-center space-y-3">
-            <h1 className="text-3xl md:text-4xl  text-[#1e7f43] dark:text-[#3ac971] font-semibold">
+            <h1 className="text-3xl md:text-4xl  text-[#1e7f43] dark:text-[#d4ad04] font-semibold">
               Comment utilise t-on BUDGEST?
             </h1>
             <p className="text-xl text-[#444444] dark:text-[#777777]">
@@ -249,14 +249,14 @@ export default function Acceuil() {
           <h1 className="text-3xl md:text-6xl text-[#1e7f43] dark:text-[#3ac971] font-semibold">
             Pret à mieux gérer votre argent ?
           </h1>
-          <p className="text-xl text-[#444444] dark:text-[#777777] text-white">
+          <p className="text-xl text-[#444444] dark:text-gray-500">
             Commencez dès aujourd’hui et transformez votre manière de suivre vos
             finances.
           </p>
         </div>
         <div className="flex items-center justify-center">
           <Link href="../inscription">
-            <button className="flex gap-2 bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl">
+            <button className="flex gap-2 bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl dark:bg-[#d7ad04] dark:hover:bg-[#ffffff] dark:border-[#d7ad04]">
               Créer mon compte gratuitement
               <ArrowRight size={20} />
             </button>

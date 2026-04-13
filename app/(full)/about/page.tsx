@@ -16,7 +16,7 @@ export default function About() {
       <div className="">
         {/* BANNER */}
         <section className=" text-center space-y-3 bg-[#1e7f4315] py-20 rounded-xl">
-          <h1 className="mt-10 text-[#333333] md:text-6xl text-5xl">
+          <h1 className="mt-10 text-[#333333] md:text-6xl text-5xl dark:text-white">
             A propos de nous, <span className="text-[#1e7f43]">BUDGEST</span>
           </h1>
           <p className="text-gray-500 text-xl md:text-2xl">
@@ -26,7 +26,7 @@ export default function About() {
 
         {/* POURQUOI AVONS NOUS CREER */}
 
-        <section className="mt-30 space-y-20 lg:px-15 px-5">
+        <section className="mt-30 space-y-20 lg:px-15 px-5 dark:text-[#ffffff]">
           <h2 className="text-center text-[#1e7f43] lg:text-5xl text-4xl">
             Pourquoi avons-nous créé cette application ?
           </h2>
