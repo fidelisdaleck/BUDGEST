@@ -25,10 +25,10 @@ export default function Acceuil() {
         {/* HERO SECTION */}
         <section className="mt-10 flex lg:flex-row flex-col lg:items-center justify-between gap-10 px-5 md:px-10 py-10 w-full">
           <div className="space-y-7">
-            <h1 className="text-5xl md:text-7xl text-[#1e7f43] font-bold">
+            <h1 className="text-5xl md:text-7xl text-[#1e7f43] dark:text-[#3ac971] font-bold">
               Reprenez le contrôle de votre budget, simplement.
             </h1>
-            <p className="text-10 md:text-xl text-[#444444] ">
+            <p className="text-10 md:text-xl text-[#444444] dark:text-[#777777]">
               Suivez vos revenus, analysez vos dépenses et organisez vos
               finances grâce à une application web claire, intuitive et
               accompagnée d’un assistant interactif.
@@ -64,10 +64,10 @@ export default function Acceuil() {
 
         {/* PROBLEME */}
         <section className="mt-20 text-center space-y-5">
-          <h2 className="text-3xl md:text-4xl text-[#1e7f43] font-semibold">
+          <h2 className="text-3xl md:text-4xl text-[#1e7f43] dark:text-[#3ac971] font-semibold">
             Votre argent disparaît sans que vous sachiez pourquoi ?
           </h2>
-          <p className="text-xl text-[#444444] lg:px-10">
+          <p className="text-xl text-[#444444] dark:text-[#777777] lg:px-10">
             Entre les dépenses quotidiennes, les abonnements et les imprévus, il
             devient difficile de garder une vision claire de son budget.
           </p>
@@ -89,20 +89,20 @@ export default function Acceuil() {
 
         {/* SOLUTION */}
         <section className="mt-30">
-          <h1 className="text-center text-2xl md:text-4xl text-[#1e7f43] font-semibold">
+          <h1 className="text-center text-2xl md:text-4xl text-[#1e7f43] dark:text-[#3ac971] font-semibold">
             Une application pensée pour simplifier votre gestion financière.
           </h1>
           <div className="space-y-10 flex lg:flex-row flex-col gap-10 lg:items-center justify-between lg:px-15 py-10 md:py-20">
             <div className="space-y-7 md:w-1/2">
-              <p className="text-10 md:text-xl text-[#444444] ">
+              <p className="text-10 md:text-xl text-[#444444] dark:text-[#777777]">
                 Notre application web vous offre tous les outils nécessaires
                 pour suivre, comprendre et organiser votre budget en un seul
                 endroit.
               </p>
-              <p className="text-10 md:text-xl text-[#444444] ">
+              <p className="text-10 md:text-xl text-[#444444] dark:text-[#777777]">
                 Plus besoin de fichiers compliqués ou de calculs manuels.
               </p>
-              <p className="text-10 md:text-xl text-[#444444] ">
+              <p className="text-10 md:text-xl text-[#444444] dark:text-[#777777]">
                 Tout est centralisé dans une interface moderne et facile à
                 utiliser.
               </p>
@@ -129,10 +129,10 @@ export default function Acceuil() {
 
         {/* FONCTIONALITES */}
         <section className="text-center">
-          <h1 className="text-3xl md:text-4xl text-[#1e7f43] font-semibold">
+          <h1 className="text-3xl md:text-4xl text-[#1e7f43] dark:text-[#3ac971] font-semibold">
             Fonctionalités principales
           </h1>
-          <p className="text-10 md:text-xl text-[#444444] mt-3">
+          <p className="text-10 md:text-xl text-[#444444] dark:text-[#777777] mt-3">
             Découvrez tous les outils mis à votre disposition pour suivre vos finances, analyser vos dépenses et organiser votre budget efficacement.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-5 md:px-20 mt-20">
@@ -174,10 +174,10 @@ export default function Acceuil() {
         {/* COMMENT CA MARCHE: Timeline */}
         <section className="py-20 mt-20 space-y-15 z-0">
           <div className="text-center space-y-3">
-            <h1 className="text-3xl md:text-4xl  text-[#1e7f43] font-semibold">
+            <h1 className="text-3xl md:text-4xl  text-[#1e7f43] dark:text-[#3ac971] font-semibold">
               Comment utilise t-on BUDGEST?
             </h1>
-            <p className="text-xl text-[#444444]">
+            <p className="text-xl text-[#444444] dark:text-[#777777]">
               Suivez nos 03 étapes principales pour obtimiser votre utilisation.
             </p>
           </div>
@@ -188,14 +188,14 @@ export default function Acceuil() {
                 className="absolute -left-22 top-10 w-8 h-8 rounded-full 
               border-2 border-[#333333] bg-white flex items-center justify-center"
               >
-                <span className="text-[#1e7f43] font-bold">1</span>
+                <span className="text-[#1e7f43] dark:text-[#3ac971] font-bold">1</span>
               </div>
 
               <div className="bg-[#1e7f4315] rounded-xl p-8 hover:bg-[#1e7f4330] transition">
-                <h2 className="text-xl font-semibold text-[#333333] mb-3">
+                <h2 className="text-xl font-semibold text-[#333333] dark:text-[#f2f2f2] mb-3">
                   Créez votre compte
                 </h2>
-                <p className="text-gray-500">
+                <p className="text-gray-500 dark:text-[#f2f2f2]">
                   Inscription rapide et sécurisée.
                 </p>
               </div>
@@ -207,14 +207,14 @@ export default function Acceuil() {
                 className="absolute -left-22 top-10 w-8 h-8 rounded-full 
               border-2 border-[#333333] bg-white flex items-center justify-center"
               >
-                <span className="text-[#1e7f43] font-bold">2</span>
+                <span className="text-[#1e7f43] dark:text-[#3ac971] font-bold">2</span>
               </div>
 
               <div className="bg-[#1e7f4315] rounded-xl p-8 hover:bg-[#1e7f4330] transition">
-                <h2 className="text-xl font-semibold text-[#333333] mb-3">
+                <h2 className="text-xl font-semibold text-[#333333] dark:text-[#f2f2f2] mb-3">
                   Ajoutez vos transactions
                 </h2>
-                <p className="text-gray-500">
+                <p className="text-gray-500 dark:text-[#f2f2f2]">
                   Enregistrez revenus et dépenses facilement.
                 </p>
               </div>
@@ -226,14 +226,14 @@ export default function Acceuil() {
                 className="absolute -left-22 top-10 w-8 h-8 rounded-full 
               border-2 border-[#333333] bg-white flex items-center justify-center"
               >
-                <span className="text-[#1e7f43] font-bold">3</span>
+                <span className="text-[#1e7f43] dark:text-[#3ac971] font-bold">3</span>
               </div>
 
               <div className="bg-[#1e7f4315] rounded-xl p-8 hover:bg-[#1e7f4330] transition">
                 <h2 className="text-xl font-semibold  mb-3">
                   Analysez votre budget
                 </h2>
-                <p className="text-gray-500">
+                <p className="text-gray-500 dark:text-[#f2f2f2]">
                   Consultez vos graphiques et échangez avec le chatbot pour
                   mieux comprendre vos finances.
                 </p>
@@ -246,10 +246,10 @@ export default function Acceuil() {
       {/* LAST CTA */}
       <section className="text-center py-20 bg-[#1e7f4313] space-y-10">
         <div className="space-y-3 px-5">
-          <h1 className="text-3xl md:text-6xl text-[#1e7f43] font-semibold">
+          <h1 className="text-3xl md:text-6xl text-[#1e7f43] dark:text-[#3ac971] font-semibold">
             Pret à mieux gérer votre argent ?
           </h1>
-          <p className="text-xl text-[#444444]">
+          <p className="text-xl text-[#444444] dark:text-[#777777] text-white">
             Commencez dès aujourd’hui et transformez votre manière de suivre vos
             finances.
           </p>

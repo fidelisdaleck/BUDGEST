@@ -2,13 +2,15 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import {useTheme} from "next-themes";
 import { usePathname } from "next/navigation";
-import {X, Menu, Moon, Languages, HandCoins} from "lucide-react"
+import {X, Menu, Moon, Sun, Languages, HandCoins} from "lucide-react"
 
 export default function Header() {
   const [IsMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
   const navLinkClass = (path: string) =>
     `text-xl px-4 py-2 rounded-lg transition-all duration-100
     ${
@@ -25,7 +27,6 @@ export default function Header() {
         <HandCoins size={30} className="text-[#1E7F43]"/>
         <Link href="/"><h1 className="text-2xl text-[#1E7F43]">BUDGEST</h1></Link>
       </div>
-
       {/* Menu desktop */}
       <nav className="hidden md:flex gap-10">
         <Link href="/" className={navLinkClass("/")}>
@@ -44,8 +45,16 @@ export default function Header() {
 
       {/* CTA */}
       <div className="flex items-center gap-4">
-        <div className="bg-[#1e7f4315] rounded-full px-2 py-2 hover:bg-[#1e7f433b]"><Moon size={20} className="text-[#1E7F43]"/></div>
-        <div className="bg-[#1e7f4315] rounded-full px-2 py-2 hover:bg-[#1e7f433b]"><Languages size={20} className="text-[#1E7F43]"/></div>
+
+        {/* BUTTON LIGHT/DARK */}
+          <button onClick={() => setTheme(isDark? "light" : "dark")}
+          className="bg-[#1e7f4315] rounded-full px-2 py-2 hover:bg-[#1e7f433b]"
+          >
+            {isDark ? (<Sun size={20} className="text-[#1E7F43]"/>) 
+            : (<Moon size={20} className="text-[#1E7F43]"/>)}
+          </button>
+
+          <div className="bg-[#1e7f4315] rounded-full px-2 py-2 hover:bg-[#1e7f433b]"><Languages size={20} className="text-[#1E7F43]"/></div>
         <div className="hidden md:block">
           <Link href="../connexion">
             <button className="bg-[#1E7F43] hover:bg-[#0f3d22] text-white font-bold py-2 px-4 rounded-full shadow-xl">
