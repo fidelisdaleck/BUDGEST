@@ -98,7 +98,7 @@ export default function Fonctionalites() {
         <div className="flex items-center justify-center">
           <Link href="../inscription">
             <button className="flex gap-2 bg-[#1E7F43] dark:bg-[#D7AD04] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl">
-              Créer mon compte gratuitement
+              Créer mon compte
               <ArrowRight size={20} />
             </button>
           </Link>
