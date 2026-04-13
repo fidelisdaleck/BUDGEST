@@ -22,7 +22,7 @@ export default function Card1({ title, icon, description }: card1Props) {
       <p className="text-gray-500 text-7">{description}</p>
       <Link href="/inscription" className="flex gap-2 text-[#1e7f43] text-xl hover:underline">
           Decouvrir
-          <ArrowRight size={20} />
+          <ArrowRight size={25} />
       </Link>
     </div>
   );

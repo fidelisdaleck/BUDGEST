@@ -14,8 +14,8 @@ export default function Fonctionalites() {
   return (
     <div>
       {/* BANNER */}
-      <section className="mt-20 text-center space-y-3 px-5">
-        <h1 className="text-[#333333] md:text-6xl text-5xl">
+      <section className="text-center space-y-3 px-5 py-20 bg-[#1e7f4315]">
+        <h1 className=" text-[#333333] md:text-6xl text-4xl">
           Des outils pensés pour simplifier votre gestion budgétaire
         </h1>
         <p className="text-gray-500 text-10 md:text-xl">

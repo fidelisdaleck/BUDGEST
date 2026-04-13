@@ -4,7 +4,7 @@ export default function Tarification() {
   return (
     <div>
       {/* BANNER */}
-      <section className="mt-20 text-center space-y-3">
+      <section className="py-20 text-center space-y-3 bg-[#1e7f4315]">
         <h1 className="text-[#333333] md:text-6xl text-4xl">
           Choisissez l’offre adaptée à votre gestion budgétaire
         </h1>

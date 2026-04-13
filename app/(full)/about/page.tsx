@@ -13,13 +13,13 @@ import Card2 from "@/components/card2";
 export default function About() {
   return (
     <div>
-      <div className="px-5">
+      <div className="">
         {/* BANNER */}
-        <section className="mt-30 text-center space-y-3">
-          <h1 className="text-[#333333] md:text-6xl text-5xl">
+        <section className=" text-center space-y-3 bg-[#1e7f4315] py-20 rounded-xl">
+          <h1 className="mt-10 text-[#333333] md:text-6xl text-5xl">
             A propos de nous, <span className="text-[#1e7f43]">BUDGEST</span>
           </h1>
-          <p className="text-gray-500 text-10 md:text-xl">
+          <p className="text-gray-500 text-xl md:text-2xl">
             Découvrez la raison detre de notre application.
           </p>
         </section>

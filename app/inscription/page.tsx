@@ -1,13 +1,18 @@
 "use client";
 import Input from "@/components/input";
+import { HandCoins } from "lucide-react";
 import Link from "next/link"
 import { FaGoogle } from "react-icons/fa";
 export default function Inscription() {
   return (
-    <div>
+    <div className="">
       <div className="flex lg:flex-row flex-col gap-10">
         {/* CREATION DE COMPTE */}
         <section className=" flex flex-col justify-center rounded-4xl px-5 md:px-16 space-y-2 bg-[url('/images/degrader.jpg')] bg-cover bg-center h-100 md:h-screen">
+          <div className="flex gap-2 mb-10">
+            <HandCoins size={30} className="text-[#1E7F43]"/>
+            <Link href="/"><h1 className="text-2xl text-[#1E7F43]">BUDGEST</h1></Link>
+          </div>
           <h1 className="text-3xl md:text-5xl text-[#333333]">
             Créez votre compte gratuitement
           </h1>
@@ -40,10 +45,10 @@ export default function Inscription() {
               </button>
             </form>
           </div>
-          <button className="bg-[#ffffff] border-2 border-[#333333] text-[#1e7f43] font-bold px-3 py-2 md:py-3 md:px-6 rounded-lg w-full shadow-xl">
-            <span className="text-2xl text-[#333333]">G</span> Google
+          <button className="bg-[#ffffff] border-2 border-[#333333] font-bold px-3 py-2 md:py-3 md:px-6 rounded-lg w-full shadow-xl">
+            <FaGoogle/>Google
           </button>
-          <div className="flex gap-1">
+          <div className="flex gap-1 pb-20">
             <p>Vous avez deja un compte?</p>
             <Link href="../connexion" className="text-blue-500 underline">connectez-vous</Link>
           </div>
