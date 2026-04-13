@@ -9,19 +9,19 @@ import {X, Menu, Moon, Sun, Languages, HandCoins} from "lucide-react"
 export default function Header() {
   const [IsMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const isDark = resolvedTheme === "dark";
   const navLinkClass = (path: string) =>
     `text-xl px-4 py-2 rounded-lg transition-all duration-100
     ${
       pathname === path
         ? "bg-[#1e7f4315] text-[#1E7F43]"
-        : "text-[#333333] hover:text-[#1E7F43] hover:bg-[#1e7f430d]"
+        : "text-[#333333] hover:text-[#1E7F43] hover:bg-[#1e7f430d] dark:text-gray-300 dark:hover:text-[#1E7F43] dark:hover:bg-[#1e7f4340]"
     }`;
 
 
   return (
-    <header className="flex items-center justify-between px-8 py-3 shadow-lg sticky top-0 w-full bg-white z-50">
+    <header className="flex items-center justify-between px-8 py-3 shadow-lg sticky top-0 w-full bg-white z-50 dark:bg-[#000000]">
       {/* logo */}
       <div className="flex gap-2">
         <HandCoins size={30} className="text-[#1E7F43]"/>
