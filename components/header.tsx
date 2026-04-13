@@ -69,16 +69,16 @@ export default function Header() {
           onClick={() => setIsMenuOpen(!IsMenuOpen)}
         >
           {IsMenuOpen ? (
-            <X className="w-6 h-6 text-[#111827]" />
+            <X className="w-6 h-6 text-[#111827] dark:text-gray-200" />
           ) : (
-            <Menu className="w-6 h-6 text-[#111827]" />
+            <Menu className="w-6 h-6 text-[#111827] dark:text-gray-200" />
           )}
         </button>
       </div>
 
       {/* Menu Mobile */}
       {IsMenuOpen && (
-        <div className="absolute top-full left-0 w-full px-3 py-5 bg-white shadow-md md:hidden">
+        <div className="absolute top-full left-0 w-full px-3 py-5 bg-white shadow-md md:hidden dark:bg-[#000000]">
           <nav className="flex flex-col gap-2 ">
             <Link href="/" className={navLinkClass("/")}>
               Acceuil
