@@ -15,7 +15,7 @@ export default function Fonctionalites() {
     <div>
       {/* BANNER */}
       <section className="text-center space-y-3 px-5 py-20 bg-[#1e7f4315]">
-        <h1 className=" text-[#333333] md:text-6xl text-4xl">
+        <h1 className=" text-[#333333] dark:text-white md:text-6xl text-4xl">
           Des outils pensés pour simplifier votre gestion budgétaire
         </h1>
         <p className="text-gray-500 text-10 md:text-xl">
@@ -92,12 +92,12 @@ export default function Fonctionalites() {
       <section className="mt-30 text-center py-20 px-10 bg-[#1e7f4313] space-y-10">
         <div className="space-y-3">
           <h1 className="text-3xl md:text-6xl text-[#1e7f43] font-semibold">Prenez le contrôle de votre budget dès aujourd’hui</h1>
-          <p className="text-xl text-[#444444]">Découvrez toutes les fonctionnalités et commencez à organiser vos finances simplement.</p>
+          <p className="text-xl text-gray-500">Découvrez toutes les fonctionnalités et commencez à organiser vos finances simplement.</p>
 
         </div>
         <div className="flex items-center justify-center">
           <Link href="../inscription">
-            <button className="flex gap-2 bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl">
+            <button className="flex gap-2 bg-[#1E7F43] dark:bg-[#D7AD04] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl">
               Créer mon compte gratuitement
               <ArrowRight size={20} />
             </button>

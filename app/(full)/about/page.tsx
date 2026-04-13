@@ -26,26 +26,26 @@ export default function About() {
 
         {/* POURQUOI AVONS NOUS CREER */}
 
-        <section className="mt-30 space-y-20 lg:px-15 px-5 dark:text-[#ffffff]">
+        <section className="mt-30 space-y-20 lg:px-15 px-5">
           <h2 className="text-center text-[#1e7f43] lg:text-5xl text-4xl">
             Pourquoi avons-nous créé cette application ?
           </h2>
           <div className="flex lg:flex-row flex-col lg:items-center justify-between lg:gap-20 gap-10 px-5">
             <div className="space-y-5">
-              <p className="text-[#444444] text-10 md:text-xl">
+              <p className="text-[#444444] dark:text-[#b3b1b1] text-10 md:text-xl">
                 La gestion du budget personnel reste un défi pour de nombreuses
                 personnes. Entre les dépenses quotidiennes, les abonnements et
                 les imprévus, il devient difficile de garder une vision claire
                 de sa situation financière.
               </p>
 
-              <p className="text-[#444444] text-10 md:text-xl">
+              <p className="text-[#444444] dark:text-[#b3b1b1] text-10 md:text-xl">
                 Ce projet est né d’un constat simple : les outils existants sont
                 souvent trop complexes ou peu adaptés aux besoins réels des
                 utilisateurs. Nous avons donc conçu une application web qui met
                 l’accent sur :
               </p>
-              <div className="text-[#444444] text-10 md:text-xl">
+              <div className="text-[#444444] dark:text-[#b3b1b1] text-10 md:text-xl">
                 <div className="flex gap-2">
                   <Check size={20} className="text-[#1e7f43]" />
                   La simplicité d’utilisation.{" "}
@@ -60,7 +60,7 @@ export default function About() {
                 </div>
               </div>
 
-              <p className="text-[#444444] text-10 md:text-xl">
+              <p className="text-[#444444] dark:text-[#b3b1b1] text-10 md:text-xl">
                 Notre objectif est d’offrir une solution pratique permettant à
                 chacun de reprendre le contrôle de ses finances sans difficulté.
               </p>
@@ -135,13 +135,13 @@ export default function About() {
           <h1 className="text-3xl md:text-6xl text-[#1e7f43] font-semibold">
             Découvrez l’application en pratique
           </h1>
-          <p className="text-xl text-[#444444]">
+          <p className="text-xl text-gray-500">
             Explorez les fonctionnalités et commencez à organiser votre budget
             simplement grâce à notre application web.
           </p>
         </div>
         <div className="flex items-center justify-center">
-          <button className="flex gap-2 bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl">
+          <button className="flex gap-2 bg-[#1E7F43] dark:bg-[#D7AD04] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl">
             Accéder à l’application
             <ArrowRight size={20} />
           </button>

@@ -50,7 +50,7 @@ export default function Header() {
           <button onClick={() => setTheme(isDark? "light" : "dark")}
           className="bg-[#1e7f4315] rounded-full px-2 py-2 hover:bg-[#1e7f433b]"
           >
-            {isDark ? (<Sun size={20} className="text-[#1E7F43]"/>) 
+            {isDark ? <Sun size={20} className="text-[#1E7F43]"/> 
             : (<Moon size={20} className="text-[#1E7F43]"/>)}
           </button>
 
