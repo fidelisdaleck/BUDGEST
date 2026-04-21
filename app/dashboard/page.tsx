@@ -26,7 +26,7 @@ export default function Dashboard() {
         <div className="space-y-3 border hover:border-2 border-green-200 rounded-lg px-2 py-3">
           <div className="flex gap-2"><Wallet size={30} className="text-[#D7AD04]"/><h1 className="text-2xl text-[#1e7f43]">Solde actuel</h1></div>
           <p className="text-[#333333] text-10">Votre balance disponible</p>
-          <p className="text-[#1e507f] text-xl">210 000 Fcfa</p>
+          <p className="text-[#1e507f] text-xl">200 000 Fcfa</p>
         </div>
 
         <div className="space-y-3 border hover:border-2 border-orange-200 rounded-lg px-2 py-3">

@@ -1,7 +1,7 @@
 "use client";
 import Input from "@/components/input";
-import { HandCoins } from "lucide-react";
 import Link from "next/link"
+import { HandCoins } from "lucide-react";
 import { FaGoogle } from "react-icons/fa";
 export default function Inscription() {
   return (
