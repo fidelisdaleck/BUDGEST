@@ -46,7 +46,7 @@ export default function Page({ className, ...props }: React.ComponentPropsWithou
       setIsLoading(false)
       return
     }
-    router.push("/auth/connexion")
+    router.push("/connexion")
     setIsLoading(false)
   }
 
@@ -55,7 +55,7 @@ export default function Page({ className, ...props }: React.ComponentPropsWithou
     <div className="">
       <div className="flex lg:flex-row flex-col gap-10 ">
         {/* CREATION DE COMPTE */}
-        <section className=" flex flex-col justify-center rounded-4xl px-5 md:px-16 space-y-2 bg-[url('/images/degrader.jpg')] bg-cover bg-center h-100 md:h-auto">
+        <section className=" flex flex-col justify-center w-full rounded-4xl px-5 md:px-16 space-y-2 bg-[url('/images/degrader.jpg')] bg-cover bg-center h-100 md:h-auto">
           <div className="flex gap-2 mb-10">
             <HandCoins size={30} className="text-[#1E7F43]"/>
             <Link href="/"><h1 className="text-2xl text-[#1E7F43]">BUDGEST</h1></Link>
@@ -69,7 +69,7 @@ export default function Page({ className, ...props }: React.ComponentPropsWithou
         </section>
 
         {/* FORMULAIRE */}
-        <section className="space-y-3 pl-5 mx-10 px-10  border border-gray-300 rounded-3xl py-2">
+        <section className="space-y-3 pl-5 mx-2 px-10 lg:w-full border border-gray-300 rounded-3xl py-2">
           <div className="py-10 text-center">
             <h1 className="text-4xl md:text-5xl text-[#1e7f43]">Inscription</h1>
           </div>

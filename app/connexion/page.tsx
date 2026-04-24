@@ -8,7 +8,7 @@ export default function Inscription() {
     <div>
       <div className="flex lg:flex-row flex-col gap-10 ">
         {/* CREATION DE COMPTE */}
-        <section className=" flex flex-col justify-center rounded-4xl px-5 md:px-16 space-y-3 bg-[url('/images/degrader.jpg')] bg-cover bg-center h-100 md:h-screen">
+        <section className=" flex flex-col justify-center w-full rounded-4xl px-5 md:px-16 space-y-3 bg-[url('/images/degrader.jpg')] bg-cover bg-center h-100 md:h-screen">
           <div className="flex gap-2 mb-10">
             <HandCoins size={30} className="text-[#1E7F43]"/>
             <Link href="/"><h1 className="text-2xl text-[#1E7F43]">BUDGEST</h1></Link>
@@ -22,9 +22,9 @@ export default function Inscription() {
         </section>
 
         {/* FORMULAIRE */}
-        <section className="space-y-5 px-10 md:px-20">
-          <div className="px-16 md:px-30 py-10">
-            <h1 className="text-3xl md:text-5xl text-[#1e7f43]">Connexion</h1>
+        <section className="space-y-3 pl-5 mx-2 px-10 lg:w-full border border-gray-300 rounded-3xl py-2">
+          <div className="py-10 text-center">
+            <h1 className="text-4xl md:text-5xl text-[#1e7f43]">Connexion</h1>
           </div>
           <div>
             <form className="space-y-4">
@@ -39,17 +39,17 @@ export default function Inscription() {
                 type="password"
                 placeholder="********"
               />
-              <button className="bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-3 py-2 md:py-3 md:px-6 mb-10 rounded-lg w-full shadow-xl">
+              <button className="bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-3 py-2 md:py-3 md:px-6 mb-2 rounded-lg w-full shadow-xl">
                 Rejoignez nous
               </button>
             </form>
           </div>
-            <button className="bg-[#ffffff] border-2 border-[#333333] text-[#1e7f43] font-bold px-3 py-2 md:py-3 md:px-6 rounded-lg w-full shadow-xl">
-              <span className="text-2xl text-[#333333] pr-3">G</span> Google
+            <button className="bg-[#333333] text-white font-bold px-3 py-2 md:py-3 md:px-6 rounded-lg w-full shadow-xl hover:bg-[#ffffff] hover:text-black hover:border-2 border-[#333333] flex items-center justify-center gap-2">
+              Connectez-vous avec Google
             </button>
-            <div className="flex gap-1 pb-10">
+            <div className="flex gap-1 justify-center">
               <p>Pas de compte?</p>
-              <Link href="../inscription" className="text-blue-500 underline">inscrivez-vous</Link>
+              <Link href="/sign-up" className="text-blue-500 underline">inscrivez-vous</Link>
             </div>
         </section>
       </div>
