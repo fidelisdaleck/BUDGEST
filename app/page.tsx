@@ -34,12 +34,12 @@ export default function Acceuil() {
               accompagnée d’un assistant interactif.
             </p>
             <div className="flex gap-5">
-              <Link href="../inscription">
+              <Link href="/sign-up">
                 <button className="bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-3 py-2 md:py-3 md:px-6 rounded-full shadow-xl">
                   Commnencer
                 </button>
               </Link>
-              <Link href="../inscription">
+              <Link href="/sign-up">
                 <button className="bg-[#D7AD04] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#D7AD04] text-white font-bold px-3 py-2 md:py-3 md:px-6 rounded-full shadow-xl">
                   Inscrivez-vous
                 </button>
