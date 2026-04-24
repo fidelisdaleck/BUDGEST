@@ -114,7 +114,7 @@ export default function Page({ className, ...props }: React.ComponentPropsWithou
           </button>
           <div className="flex gap-1 pb-2 justify-center">
             <p>Vous avez deja un compte?</p>
-            <Link href="../connexion" className="text-blue-500 underline">connectez-vous</Link>
+            <Link href="/connexion" className="text-blue-500 underline">connectez-vous</Link>
           </div>
         </section>
       </div>
