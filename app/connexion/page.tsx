@@ -20,10 +20,10 @@ export default function Inscription() {
     setError(null);
 
     try {
-      const res = await fetch("api/login", {
+      const res = await fetch("/api/login", {
         method: "POST",
         headers: {
-          "content-Type": "application/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ email, password }),
       });
@@ -37,7 +37,7 @@ export default function Inscription() {
       }
       router.push("/dashboard");
     } catch (err) {
-      setError("Erreur réseau");
+      setError("Erreur réseau" +  err);
     }
     setIsLoading(false);
   };
