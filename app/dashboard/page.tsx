@@ -1,7 +1,5 @@
 "use client";
 import { Wallet, TrendingUp, TrendingDown, Target, Plus, Download } from "lucide-react";
-import Input from "@/components/input";
-
 export default function Dashboard() {
   return (
     <div className="px-10">
@@ -45,17 +43,6 @@ export default function Dashboard() {
           <div className="flex gap-2"><Target size={30} className="text-[#D7AD04]"/><h1 className="text-2xl text-[#1e7f43]">Budget restant</h1></div>
           <p className="text-[#333333] text-10">Votre budget encore disponible</p>
           <p className="text-[#1e507f] text-xl">190 000 Fcfa</p>
-        </div>
-      </section>
-
-      {/* CHATBOT */}
-      <section className="mt-20">
-        <div className=" text-center space-y-3">
-          <h1 className="text-4xl text-[#1e7f43]">Assistant d’aide</h1>
-          <p className="text-xl text-[#444444]">Besoin d’aide ? Discutez avec l’assistant pour obtenir des informations sur l’utilisation de l’application ou des conseils simples de gestion budgétaire.</p>
-        </div>
-        <div className="mt-10 space-y-3">
-          <Input label="Votre question:" placeholder="Posez votre question ici..." />
         </div>
       </section>
 

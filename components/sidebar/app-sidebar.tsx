@@ -1,10 +1,16 @@
 "use client";
+
+import { useAuth } from '@/hooks/useAuth'
+import { useRouter } from 'next/navigation'
+
+  
 import {
   Sidebar,
   SidebarHeader,
   SidebarContent,
   SidebarFooter,
 } from "@/components/ui/sidebar";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -19,6 +25,17 @@ import {
 } from "lucide-react";
 
 export default function AppSidebar() {
+
+  const { signOut } = useAuth()
+  const router = useRouter()
+
+  const handleSignOut = async () => {
+    const confirm = window.confirm("Se déconnecter ?");
+    if (!confirm) return;
+
+    await signOut()
+    router.push('/')
+  }
 
   const pathname = usePathname();
   const navLinkClass = (path: string) =>
@@ -36,6 +53,7 @@ export default function AppSidebar() {
           <Link href="/..">
             <h1 className="text-2xl text-[#1E7F43]">BUDGEST</h1>
           </Link>
+          
         </div>
       </SidebarHeader>
 
@@ -85,8 +103,9 @@ export default function AppSidebar() {
           Profil
         </Link>
         <Link
-          href="/dashboard/deconnexion"
-          className={navLinkClass("/dashboard/deconnexion")}
+          href="#"
+          className={navLinkClass("#")}
+          onClick={handleSignOut}
         >
           <LogOut size={25} className="text-[#d70404]" />
           Deconnexion

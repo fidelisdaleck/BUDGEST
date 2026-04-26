@@ -5,6 +5,7 @@ import { HandCoins } from "lucide-react";
 import { FaGoogle } from "react-icons/fa";
 import { useState} from "react";
 import { useRouter } from "next/navigation";
+import { createSupabaseServer } from "@/lib/auth";
 export default function Page({ className, ...props }: React.ComponentPropsWithoutRef<'div'> ) {
 
   const [name, setName] = useState("");
