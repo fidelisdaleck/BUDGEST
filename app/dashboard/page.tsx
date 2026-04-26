@@ -21,27 +21,27 @@ export default function Dashboard() {
 
       {/* RESUME */}
       <section className="mt-10 grid md:grid-cols-3 grid-cols-1 gap-10">
-        <div className="space-y-3 border hover:border-2 border-green-200 rounded-lg px-2 py-3">
+        <div className="space-y-3 rounded-lg shadow-md px-5 py-3">
           <div className="flex gap-2"><Wallet size={30} className="text-[#D7AD04]"/><h1 className="text-2xl text-[#1e7f43]">Solde actuel</h1></div>
-          <p className="text-[#333333] text-10">Votre balance disponible</p>
+          <p className="text-gray-500 text-10">Votre balance disponible:</p>
           <p className="text-[#1e507f] text-xl">200 000 Fcfa</p>
         </div>
 
-        <div className="space-y-3 border hover:border-2 border-orange-200 rounded-lg px-2 py-3">
+        <div className="space-y-3 rounded-lg shadow-md px-5 py-3">
           <div className="flex gap-2"><TrendingUp size={30} className="text-[#D7AD04]"/><h1 className="text-2xl text-[#1e7f43]">Revenus du mois</h1></div>
-          <p className="text-[#333333] text-10">Total des revenus enregistrés ce mois-ci</p>
+          <p className="text-gray-500 text-10">Total des revenus enregistrés ce mois-ci:</p>
           <p className="text-[#1e507f] text-xl">120 000 Fcfa</p>
         </div>
 
-        <div className="space-y-3 border hover:border-2 border-red-200 rounded-lg px-2 py-3">
+         <div className="space-y-3 rounded-lg shadow-md px-5 py-3">
           <div className="flex gap-2"><TrendingDown size={30} className="text-[#D7AD04]"/><h1 className="text-2xl text-[#1e7f43]">Depenses du mois</h1></div>
-          <p className="text-[#333333] text-10">Total de vos dépenses mensuelles</p>
+          <p className="text-gray-500 text-10">Total de vos dépenses mensuelles</p>
           <p className="text-[#1e507f] text-xl">75 000 Fcfa</p>
         </div>
 
-         <div className="space-y-3 border hover:border-2 border-yellow-200 rounded-lg px-2 py-3">
+         <div className="space-y-3 rounded-lg shadow-md px-5 py-3">
           <div className="flex gap-2"><Target size={30} className="text-[#D7AD04]"/><h1 className="text-2xl text-[#1e7f43]">Budget restant</h1></div>
-          <p className="text-[#333333] text-10">Votre budget encore disponible</p>
+          <p className="text-gray-500 text-10">Votre budget encore disponible:</p>
           <p className="text-[#1e507f] text-xl">190 000 Fcfa</p>
         </div>
       </section>
