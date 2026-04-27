@@ -1,5 +1,5 @@
 import { getCurrentUser } from '@/lib/auth'
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest } from 'next/server'
 import type { User } from '@supabase/supabase-js'
 
 /**
