@@ -65,7 +65,7 @@ export async function withAuth(handler: (req: NextRequest, user: User) => Promis
 /**
  * Récupère l'utilisateur actuel (ou null si non authentifié)
  */
-export async function getCurrentUser() {
+export async function getCurrentUser(req: NextRequest) {
   try {
     const supabase = await createSupabaseServer()
     const {
