@@ -1,5 +1,5 @@
 import { ProtectedRoute } from '@/components/ProtectedRoute'
-import { UserMenu } from '@/components/UserMenu'
+import { UserInfo } from '@/components/UserMenu'
 
 export default function DashboardLayout({
   children,
@@ -19,7 +19,7 @@ export default function DashboardLayout({
           {/* Header avec UserMenu */}
           <header className="border-b border-gray-200 p-4 flex justify-between items-center">
             <h1 className="text-2xl font-bold">Dashboard</h1>
-            <UserMenu />
+            <UserInfo />
           </header>
 
           {/* Contenu */}
