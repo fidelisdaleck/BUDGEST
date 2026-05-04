@@ -10,7 +10,7 @@ export default function Chatbot(){
                 <p className="text-xl text-[#444444]">Que souhaitez-vous savoir aujourd&rsquo;hui sur la gestion de budget?</p>
                 </div>
                 <div className="mt-10 space-y-3 w-full">
-                <Input label="Votre question:" placeholder="Posez votre question ici..."/>
+                <Input label="Votre question:" value="" placeholder="Posez votre question ici..."/>
                 </div>
             </section>
         </div>
