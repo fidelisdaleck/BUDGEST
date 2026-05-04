@@ -1,21 +1,26 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link"
-import { Check, Download } from "lucide-react";
+import { Check, Download, } from "lucide-react";
 
 export default function Exportation() {
   return (
     <div className="">
       {/* HERO SECTION */}
       <section className="px-10">
-        <div className=" text-center space-y-3">
-          <h1 className="text-2xl md:text-4xl text-[#1e7f43]">
-            Exportez vos données financières en un clic
-          </h1>
-          <p className="text-10 md:text-xl text-[#444444]">
-            Téléchargez un rapport clair et structuré de votre activité
-            financière au format PDF pour conserver, analyser ou partager vos
-            informations.
+        <div className="space-y-1 mt-5">
+          <div className="flex justify-between items-center lg:flex-row flex-col">
+            <h1 className="text-xl md:text-4xl text-[#1e7f43]">
+              Exportez vos données financières en un clic
+            </h1>
+            <button
+              className="bg-[#1e7f43] text-white font-bold px-4 py-2 rounded-lg flex gap-2 hover:bg-green-900"
+            >
+              <Download size={20} /> Exporter des donnees
+            </button>
+          </div>
+          <p className="text-lg text-[#444444]">
+            Téléchargez un rapport clair en format PDF.
           </p>
         </div>
       </section>
@@ -32,7 +37,7 @@ export default function Exportation() {
           </p>
           <div className="space-y-3">
             <p className="text-8 md:text-xl text-[#444444]">
-              Lexportation PDF vous permet:
+              L&rsquo;exportation PDF vous permet:
             </p>
             <div className="flex gap-2">
               <Check size={20} className="text-[#D7AD04]" />
@@ -73,7 +78,7 @@ export default function Exportation() {
       </section>
 
       {/* LAST CTA */}
-      <section className="mt-10 text-center py-20 bg-[#1e7f4313] space-y-10">
+      <section className="mt-10 text-center py-20 bg-[#1e7f4310] space-y-10">
         <div className="space-y-3">
           <h1 className="text-3xl md:text-6xl text-[#1e7f43] font-semibold">
             Génère ton rapport financier maintenant

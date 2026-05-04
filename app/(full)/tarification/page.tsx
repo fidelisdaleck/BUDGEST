@@ -28,8 +28,6 @@ export default function Tarification() {
             <div className="space-y-3">
                 <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Gestion revenus & dépenses </div>
                 <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Tableau de bord </div>
-                <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Export PDF / Excel</div>
-                <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Chatbot d’assistance</div>
             </div>
             <button className="bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-3 py-2 md:py-3 md:px-6 rounded-lg shadow-xl">
               Essayer gratuitement
@@ -49,11 +47,6 @@ export default function Tarification() {
                 <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Tableau de bord </div>
                 <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Export PDF / Excel</div>
                 <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Chatbot d’assistance</div>
-                <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Analyses avancées</div>
-                <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Alertes personnalisées</div>
-                <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Catégories personnalisées</div>
-                <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Personnalisation dashboard</div>
-                <div className="flex gap-2"><Check className="text-[#D7AD04]"/>Support prioritaire</div>
             </div>
             <button className="bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-3 py-2 md:py-3 md:px-6 rounded-lg shadow-xl">
               Essayer le premium

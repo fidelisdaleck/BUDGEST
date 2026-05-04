@@ -18,7 +18,7 @@ export default function PieChart() {
     datasets: [
       {
         label: "Dépenses",
-        data: [300, 150, 100, 80],
+        data: [3000, 1500, 1000, 800],
         backgroundColor: [
           "#3B82F6",
           "#1e7f43",

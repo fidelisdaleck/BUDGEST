@@ -62,35 +62,35 @@ export default function AppSidebar() {
           href="/dashboard"
           className={navLinkClass("/dashboard")}
         >
-          <LayoutDashboard size={25} className="text-[#D7AD04]" />
+          <LayoutDashboard size={20} className="text-[#D7AD04]" />
           Tableau de Bord
         </Link>
         <Link
           href="/dashboard/depense"
-          className={navLinkClass("/dashboard/depense")}
+          className={navLinkClass("/dashboard/transaction")}
         >
-          <Receipt size={25} className="text-[#D7AD04]" />
-          Depenses & Revenus
+          <Receipt size={20} className="text-[#D7AD04]" />
+          Transactions
         </Link>
         <Link
           href="/dashboard/exportation"
           className={navLinkClass("/dashboard/exportation")}
         >
-          <Download size={25} className="text-[#D7AD04]" />
+          <Download size={20} className="text-[#D7AD04]" />
           Exportation
         </Link>
         <Link
           href="/dashboard/statistiques"
           className={navLinkClass("/dashboard/statistiques")}
         >
-          <ChartLine size={25} className="text-[#D7AD04]" />
+          <ChartLine size={20} className="text-[#D7AD04]" />
           Statistiques
         </Link>
         <Link
           href="/dashboard/chatbot"
           className={navLinkClass("/dashboard/chatbot")}
         >
-          <BotMessageSquare size={25} className="text-[#D7AD04]" />
+          <BotMessageSquare size={20} className="text-[#D7AD04]" />
           Chatbot
         </Link>
       </SidebarContent>
@@ -99,7 +99,7 @@ export default function AppSidebar() {
           href="/dashboard/profil"
           className={navLinkClass("/dashboard/profil")}
         >
-          <User size={25} className="text-[#D7AD04]" />
+          <User size={20} className="text-[#D7AD04]" />
           Profil
         </Link>
         <Link
@@ -107,7 +107,7 @@ export default function AppSidebar() {
           className={navLinkClass("#")}
           onClick={handleSignOut}
         >
-          <LogOut size={25} className="text-[#d70404]" />
+          <LogOut size={20} className="text-[#d70404]" />
           Deconnexion
         </Link>
       </SidebarFooter>

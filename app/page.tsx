@@ -139,7 +139,7 @@ export default function Acceuil() {
             <Card1
               icon={<Wallet size={30} className="text-[#D7AD04]" />}
               title="Gérez vos revenus et dépenses facilement"
-              description="Ajoutez, modifiez ou supprimez vos transactions en quelques clics et gardez un suivi précis de votre situation financière."
+              description="Ajoutez, modifiez ou supprimez vos depenses en quelques clics et gardez un suivi précis de votre situation financière."
             />
             <Card1
               icon={<Folder size={30} className="text-[#D7AD04]" />}

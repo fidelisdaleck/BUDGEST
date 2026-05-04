@@ -24,11 +24,11 @@ ChartJS.register(
 
 export default function Chart() {
   const data = {
-    labels: ["Jan", "Fév", "Mar", "Avr", "Mai"],
+    labels: ["Jan", "Fév", "Mar", "Avr", "Mai" , "Avril", "Juil"],
     datasets: [
       {
         label: "Revenus",
-        data: [12, 19, 3, 5, 2],
+        data: [12000, 2500, 3000, 5500, 2900, 4000],
         backgroundColor: "#1e7f43",
       },
     ],
