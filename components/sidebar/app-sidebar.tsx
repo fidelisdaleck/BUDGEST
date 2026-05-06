@@ -66,7 +66,7 @@ export default function AppSidebar() {
           Tableau de Bord
         </Link>
         <Link
-          href="/dashboard/depense"
+          href="/dashboard/transaction"
           className={navLinkClass("/dashboard/transaction")}
         >
           <Receipt size={20} className="text-[#D7AD04]" />
