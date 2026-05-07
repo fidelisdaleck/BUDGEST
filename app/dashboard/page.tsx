@@ -1,10 +1,43 @@
 "use client";
+import { useEffect, useState } from "react";
+import type { User } from "@supabase/supabase-js";
+import { supabase } from "@/lib/supabase";
 import { Wallet, TrendingUp, TrendingDown, Target, Bus } from "lucide-react";
-
 import Chart from "@/components/chartTemp";
 import PieChart from "@/components/PieChart";
 import AddBudget from "@/components/add-budget";
+import { Profile } from "@/lib/definition";
+
 export default function Dashboard() {
+  const [profile, setProfile] = useState<Profile | null>(null)
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+
+      // 1. récupérer user connecté
+      const { data: { user }, error: userError } = await supabase.auth.getUser()
+
+      if (userError || !user) {
+        console.log("Pas connecté")
+        return
+      }
+
+      // 2. récupérer profil
+      const { data, error } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id)
+        .single()
+
+      if (error) {
+        console.log("Erreur profile:", error.message)
+      } else {
+        setProfile(data)
+      }
+    }
+
+    fetchProfile()
+  }, [])
   return (
     <div className="px-10">
       {/* ENTETE */}
@@ -12,9 +45,9 @@ export default function Dashboard() {
         <div>
           <h1 className="text-3xl md:text-5xl">
             Bienvenu sur BUDGEST,{" "}
-            <span className="text-[#1e7f43]">Lithina</span>
+            <span className="text-[#1e7f43]">{profile?.name || "Utilisateur"}</span>
           </h1>
-          <p className="text-xl text-[#333333]">
+          <p className="text-xl text-[#333333] dark:text-gray-300">
             Voici un aperçu de votre situation financière actuelle.
           </p>
         </div>
@@ -24,49 +57,51 @@ export default function Dashboard() {
       </section>
 
       {/* RESUME */}
-      <section className="mt-10 grid md:grid-cols-4 grid-cols-2 gap-10">
-        <div className="space-y-3 rounded-lg shadow-md px-5 py-3">
+      <section>
+        <div className=" mt-10 space-y-3 rounded-lg border border-gray-100 dark:border-gray-500 shadow-md px-10 py-5">
           <div className="flex gap-2">
             <Wallet size={30} className="text-[#D7AD04]" />
-            <h1 className="text-xl text-[#1e7f43]">Budget total</h1>
+            <h1 className="text-2xl">Budget total</h1>
           </div>
           <p className="text-gray-500 text-10">
             Votre balance disponible pour ce mois:
           </p>
-          <p className="text-[#1e507f] text-xl">200 000 Fcfa</p>
+          <p className="text-[#1e507f] text-4xl">200 000 Fcfa</p>
         </div>
 
-        <div className="space-y-3 rounded-lg shadow-md px-5 py-3">
-          <div className="flex gap-2">
-            <TrendingUp size={30} className="text-[#D7AD04]" />
-            <h1 className="text-xl text-[#1e7f43]">Revenus mois</h1>
+        <div className="mt-10 grid md:grid-cols-3 grid-cols-1 md:gap-20">
+          <div className="space-y-3 rounded-lg border border-gray-200 dark:border-gray-500 shadow-xl px-5 py-3">
+            <div className="flex gap-2">
+              <TrendingUp size={30} className="text-[#D7AD04]" />
+              <h1 className="text-xl text-[#1e7f43]">Revenus mois</h1>
+            </div>
+            <p className="text-gray-500 text-10">
+              Total des revenus enregistrés:
+            </p>
+            <p className="text-[#1e507f] text-xl">120 000 Fcfa</p>
           </div>
-          <p className="text-gray-500 text-10">
-            Total des revenus enregistrés:
-          </p>
-          <p className="text-[#1e507f] text-xl">120 000 Fcfa</p>
-        </div>
 
-        <div className="space-y-3 rounded-lg shadow-md px-5 py-3">
-          <div className="flex gap-2">
-            <TrendingDown size={30} className="text-[#D7AD04]" />
-            <h1 className="text-xl text-[#1e7f43]">Depenses mois</h1>
+          <div className="space-y-3 rounded-lg border border-gray-200 dark:border-gray-500 shadow-xl px-5 py-3">
+            <div className="flex gap-2">
+              <TrendingDown size={30} className="text-[#D7AD04]" />
+              <h1 className="text-xl text-[#1e7f43]">Depenses mois</h1>
+            </div>
+            <p className="text-gray-500 text-10">
+              Total de vos dépenses:
+            </p>
+            <p className="text-[#1e507f] text-xl">75 000 Fcfa</p>
           </div>
-          <p className="text-gray-500 text-10">
-            Total de vos dépenses mensuelles:
-          </p>
-          <p className="text-[#1e507f] text-xl">75 000 Fcfa</p>
-        </div>
 
-        <div className="space-y-3 rounded-lg shadow-md px-5 py-3">
-          <div className="flex gap-2">
-            <Target size={30} className="text-[#D7AD04]" />
-            <h1 className="text-xl text-[#1e7f43]">Budget restant</h1>
+          <div className="space-y-3 rounded-lg shadow-xl border border-gray-200 dark:border-gray-500 px-5 py-3">
+            <div className="flex gap-2">
+              <Target size={30} className="text-[#D7AD04]" />
+              <h1 className="text-xl text-[#1e7f43]">Budget restant</h1>
+            </div>
+            <p className="text-gray-500 text-10">
+              Votre budget encore disponible:
+            </p>
+            <p className="text-[#1e507f] text-xl">5 000 Fcfa</p>
           </div>
-          <p className="text-gray-500 text-10">
-            Votre budget encore disponible:
-          </p>
-          <p className="text-[#1e507f] text-xl">5 000 Fcfa</p>
         </div>
       </section>
 
@@ -94,9 +129,9 @@ export default function Dashboard() {
       {/* Briefing de transaction */}
 
       <section className="mb-10">
-        <div className="rounded-xl shadow-xl px-10 py-10">
+        <div className="rounded-xl shadow-xl px-10 py-10 dark:border border-gray-700">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl md:text-4xl text-[#333333]">
+            <h1 className="text-2xl md:text-4xl text-[#333333] dark:text-white">
               Transactions recentes.
             </h1>
             <p className="text-xl text-blue-500">Voir tout</p>
@@ -111,8 +146,8 @@ export default function Dashboard() {
               </div>
               {/* texte + date */}
               <div className="space-y-3">
-                <h1 className="text-xl text-[#333333]">Salaire</h1>
-                <p className="text-lg text-[#444444]">
+                <h1 className="text-xl text-[#333333]  dark:text-white">Salaire</h1>
+                <p className="text-lg text-[#444444] dark:text-gray-300">
                   Aujourd&rsquo;hui - 7:30
                 </p>
               </div>
@@ -134,8 +169,8 @@ export default function Dashboard() {
               </div>
               {/* texte + date */}
               <div className="space-y-3">
-                <h1 className="text-xl text-[#333333]">Transport</h1>
-                <p className="text-lg text-[#444444]">
+                <h1 className="text-xl text-[#333333]  dark:text-white">Transport</h1>
+                <p className="text-lg text-[#444444] dark:text-gray-300">
                   Aujourd&rsquo;hui - 8:30
                 </p>
               </div>
@@ -157,8 +192,8 @@ export default function Dashboard() {
               </div>
               {/* texte + date */}
               <div className="space-y-3">
-                <h1 className="text-xl text-[#333333]">Alimentation</h1>
-                <p className="text-lg text-[#444444]">
+                <h1 className="text-xl text-[#333333]  dark:text-white">Alimentation</h1>
+                <p className="text-lg text-[#444444] dark:text-gray-300">
                   Aujourd&rsquo;hui - 12:40
                 </p>
               </div>
@@ -171,7 +206,6 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-
       </section>
     </div>
   );

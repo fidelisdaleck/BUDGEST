@@ -8,8 +8,10 @@ export default function AddBudget() {
   const [montant, setMontant] = useState("");
   const [mois, setMois] = useState("");
   const [limit_mois, setLimitMois] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
+    setLoading(true);
     e.preventDefault();
 
     const budgetData = {
@@ -33,6 +35,7 @@ export default function AddBudget() {
     } else {
       alert("Erreur lors de l'ajout du budget");
     }
+    setLoading(false);
   };
 
   return (
@@ -65,34 +68,36 @@ export default function AddBudget() {
             </button>
 
             {/* Titre */}
-            <h2 className="text-xl font-semibold mb-4">Ajouter un Budget</h2>
+            <h2 className="text-xl dark:text-black font-semibold mb-4">
+              Ajouter un Budget
+            </h2>
 
             {/* FORMULAIRE */}
             <form onSubmit={handleSubmit}>
               <input
                 type="number"
                 placeholder="Montant"
-                className="border p-2 w-full rounded-lg focus:ring focus:ring-green-300 outline-none"
+                className="border dark:border-gray-300 p-2 w-full rounded-lg focus:ring focus:ring-green-300 outline-none text-gray-400"
                 value={montant}
                 onChange={(e) => setMontant(e.target.value)}
               />
               <div className="mt-5 grid grid-cols-2 gap-4">
-                <div className="space-y-2">
+                <div className="space-y-2 dark:text-black">
                   <label htmlFor="Debut">Date de debut:</label>
                   <input
                     type="date"
                     id="Debut"
-                    className="border p-2 w-full rounded-lg focus:ring focus:ring-green-300 outline-none text-gray-400"
+                    className="border dark:border-gray-300 p-2 w-full rounded-lg focus:ring focus:ring-green-300 outline-none text-gray-400"
                     value={mois}
                     onChange={(e) => setMois(e.target.value)}
                   />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 dark:text-black">
                   <label htmlFor="Fin">Date de fin:</label>
                   <input
                     type="date"
                     id="Fin"
-                    className="border p-2 w-full rounded-lg focus:ring focus:ring-green-300 outline-none text-gray-400"
+                    className="border dark:border-gray-300 p-2 w-full rounded-lg focus:ring focus:ring-green-300 outline-none text-gray-400"
                     value={limit_mois}
                     onChange={(e) => setLimitMois(e.target.value)}
                   />
@@ -104,16 +109,19 @@ export default function AddBudget() {
                 <button
                   type="button"
                   onClick={() => setIsOpen(false)}
-                  className="px-4 py-2 border rounded-lg"
+                  className="px-4 py-2 border dark:text-black dark:border-gray-500 rounded-lg"
                 >
                   Annuler
                 </button>
 
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-[#1e7f43] text-white rounded-lg"
+                  disabled={loading}
+                  className={`px-4 py-2 rounded-lg text-white ${
+                    loading ? "bg-gray-400 cursor-not-allowed" : "bg-[#1e7f43]"
+                  }`}
                 >
-                  Ajouter
+                  {loading ? "Ajout en cours..." : "Ajouter"}
                 </button>
               </div>
             </form>

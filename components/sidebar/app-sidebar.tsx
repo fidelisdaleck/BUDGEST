@@ -16,12 +16,13 @@ import { usePathname } from "next/navigation";
 import {
   HandCoins,
   LayoutDashboard,
-  Receipt,
+  ArrowLeftRight,
   Download,
   BotMessageSquare,
   User,
   LogOut,
-  ChartLine
+  ChartLine,
+  ChartColumnStacked
 } from "lucide-react";
 
 export default function AppSidebar() {
@@ -43,7 +44,7 @@ export default function AppSidebar() {
     ${
       pathname === path
         ? "bg-[#1e7f4315] text-[#1E7F43]"
-        : "text-[#333333] hover:text-[#1E7F43] hover:bg-[#1e7f430d]"
+        : "text-[#333333] dark:text-gray-300 hover:text-[#1E7F43] hover:bg-[#1e7f430d]"
     }`;
   return (
     <Sidebar>
@@ -66,10 +67,17 @@ export default function AppSidebar() {
           Tableau de Bord
         </Link>
         <Link
+          href="/dashboard/categorie"
+          className={navLinkClass("/dashboard/categorie")}
+        >
+          <ChartColumnStacked size={20} className="text-[#D7AD04]" />
+          Categories
+        </Link>
+        <Link
           href="/dashboard/transaction"
           className={navLinkClass("/dashboard/transaction")}
         >
-          <Receipt size={20} className="text-[#D7AD04]" />
+          <ArrowLeftRight size={20} className="text-[#D7AD04]" />
           Transactions
         </Link>
         <Link

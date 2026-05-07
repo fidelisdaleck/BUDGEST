@@ -36,15 +36,17 @@ export default function AddTransaction() {
             </button>
 
             {/* Titre */}
-            <h2 className="text-xl font-semibold mb-4">Ajouter une transaction</h2>
+            <h2 className="text-xl font-semibold mb-4">
+              Ajouter une transaction
+            </h2>
 
             {/* FORMULAIRE */}
             <form>
               <div className="mt-5 grid grid-cols-2 gap-4">
                 <input
-                    type="text"
-                    placeholder="Titre"
-                    className="border p-2 w-full rounded-lg focus:ring focus:ring-green-300 outline-none"
+                  type="text"
+                  placeholder="Titre"
+                  className="border p-2 w-full rounded-lg focus:ring focus:ring-green-300 outline-none"
                 />
                 <input
                   type="text"
@@ -59,9 +61,9 @@ export default function AddTransaction() {
                   className="border p-2 w-full rounded-lg focus:ring focus:ring-green-300 outline-none"
                 />
                 <select className="input border p-2 w-full rounded-lg focus:ring focus:ring-green-300 outline-none text-gray-400">
-                    <option>Type</option>
-                    <option>Revenu</option>
-                    <option>Depense</option>
+                  <option>Type</option>
+                  <option>Revenu</option>
+                  <option>Depense</option>
                 </select>
               </div>
 
