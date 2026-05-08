@@ -9,35 +9,38 @@ import AddBudget from "@/components/add-budget";
 import { Profile } from "@/lib/definition";
 
 export default function Dashboard() {
-  const [profile, setProfile] = useState<Profile | null>(null)
+  const [profile, setProfile] = useState<Profile | null>(null);
 
   useEffect(() => {
     const fetchProfile = async () => {
-
-      // 1. récupérer user connecté
-      const { data: { user }, error: userError } = await supabase.auth.getUser()
+      // récupérer utilisateur connecté
+      const {
+        data: { user },
+        error: userError,
+      } = await supabase.auth.getUser();
 
       if (userError || !user) {
-        console.log("Pas connecté")
-        return
+        console.log("Pas connecté");
+        return;
       }
 
-      // 2. récupérer profil
+      // récupérer profil dans la table profiles
       const { data, error } = await supabase
         .from("profiles")
         .select("*")
         .eq("id", user.id)
-        .single()
+        .single();
 
       if (error) {
-        console.log("Erreur profile:", error.message)
+        console.log("Erreur profile:", error.message);
       } else {
-        setProfile(data)
+        console.log(data);
+        setProfile(data);
       }
-    }
+    };
 
-    fetchProfile()
-  }, [])
+    fetchProfile();
+  }, []);
   return (
     <div className="px-10">
       {/* ENTETE */}
@@ -45,7 +48,9 @@ export default function Dashboard() {
         <div>
           <h1 className="text-3xl md:text-5xl">
             Bienvenu sur BUDGEST,{" "}
-            <span className="text-[#1e7f43]">{profile?.name || "Utilisateur"}</span>
+            <span className="text-[#1e7f43]">
+              {profile?.name || "Utilisateur"}
+            </span>
           </h1>
           <p className="text-xl text-[#333333] dark:text-gray-300">
             Voici un aperçu de votre situation financière actuelle.
@@ -86,9 +91,7 @@ export default function Dashboard() {
               <TrendingDown size={30} className="text-[#D7AD04]" />
               <h1 className="text-xl text-[#1e7f43]">Depenses mois</h1>
             </div>
-            <p className="text-gray-500 text-10">
-              Total de vos dépenses:
-            </p>
+            <p className="text-gray-500 text-10">Total de vos dépenses:</p>
             <p className="text-[#1e507f] text-xl">75 000 Fcfa</p>
           </div>
 
@@ -146,7 +149,9 @@ export default function Dashboard() {
               </div>
               {/* texte + date */}
               <div className="space-y-3">
-                <h1 className="text-xl text-[#333333]  dark:text-white">Salaire</h1>
+                <h1 className="text-xl text-[#333333]  dark:text-white">
+                  Salaire
+                </h1>
                 <p className="text-lg text-[#444444] dark:text-gray-300">
                   Aujourd&rsquo;hui - 7:30
                 </p>
@@ -169,7 +174,9 @@ export default function Dashboard() {
               </div>
               {/* texte + date */}
               <div className="space-y-3">
-                <h1 className="text-xl text-[#333333]  dark:text-white">Transport</h1>
+                <h1 className="text-xl text-[#333333]  dark:text-white">
+                  Transport
+                </h1>
                 <p className="text-lg text-[#444444] dark:text-gray-300">
                   Aujourd&rsquo;hui - 8:30
                 </p>
@@ -192,7 +199,9 @@ export default function Dashboard() {
               </div>
               {/* texte + date */}
               <div className="space-y-3">
-                <h1 className="text-xl text-[#333333]  dark:text-white">Alimentation</h1>
+                <h1 className="text-xl text-[#333333]  dark:text-white">
+                  Alimentation
+                </h1>
                 <p className="text-lg text-[#444444] dark:text-gray-300">
                   Aujourd&rsquo;hui - 12:40
                 </p>
