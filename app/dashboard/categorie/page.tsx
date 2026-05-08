@@ -1,4 +1,5 @@
 import AddCategorie from "@/components/add-categorie";
+import CategorieList from "@/components/categorielist";
 
 export default function Categorie() {
   return (
@@ -13,6 +14,9 @@ export default function Categorie() {
         </div>
         <div>
             <AddCategorie />
+        </div>
+        <div>
+          <CategorieList/>
         </div>
       </section>
     </div>

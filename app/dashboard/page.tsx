@@ -69,7 +69,7 @@ export default function Dashboard() {
           <p className="text-[#1e507f] text-4xl">200 000 Fcfa</p>
         </div>
 
-        <div className="mt-10 grid md:grid-cols-3 grid-cols-1 md:gap-20">
+        <div className="mt-10 grid md:grid-cols-3 grid-cols-1 gap-10 md:gap-20">
           <div className="space-y-3 rounded-lg border border-gray-200 dark:border-gray-500 shadow-xl px-5 py-3">
             <div className="flex gap-2">
               <TrendingUp size={30} className="text-[#D7AD04]" />
