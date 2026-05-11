@@ -196,7 +196,7 @@ export default function Acceuil() {
                   Créez votre compte
                 </h2>
                 <p className="text-gray-500 dark:text-[#f2f2f2]">
-                  Inscription rapide et sécurisée.
+                  sign-up rapide et sécurisée.
                 </p>
               </div>
             </div>
@@ -255,7 +255,7 @@ export default function Acceuil() {
           </p>
         </div>
         <div className="flex items-center justify-center">
-          <Link href="../inscription">
+          <Link href="../sign-up">
             <button className="flex gap-2 bg-[#1E7F43] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl dark:bg-[#d7ad04] dark:hover:bg-[#ffffff] dark:border-[#d7ad04]">
               Créer mon compte gratuitement
               <ArrowRight size={20} />

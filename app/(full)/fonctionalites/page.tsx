@@ -29,7 +29,7 @@ export default function Fonctionalites() {
       <section className="mt-30 grid md:grid-cols-2 grid-cols-1 gap-10 md:gap-15 px-10 mb-10">
         <Card2
           icon={<LogIn size={30} className="text-[#D7AD04]" />}
-          title="Inscription et connexion sécurisées"
+          title="sign-up et connexion sécurisées"
           description="
             Créez votre compte en toute simplicité et accédez à votre espace personnel grâce à un système d’authentification sécurisé.
             Vos données restent accessibles uniquement par vous, pour une utilisation en toute confiance.
@@ -96,7 +96,7 @@ export default function Fonctionalites() {
 
         </div>
         <div className="flex items-center justify-center">
-          <Link href="../inscription">
+          <Link href="../sign-up">
             <button className="flex gap-2 bg-[#1E7F43] dark:bg-[#D7AD04] hover:bg-[#ffffff] hover:border-2 hover:text-black border-[#1e7f43] text-white font-bold px-4 py-2 md:py-3 md:px-6 rounded-xl shadow-xl">
               Créer mon compte
               <ArrowRight size={20} />
