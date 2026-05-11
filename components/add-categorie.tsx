@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, Plus } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
@@ -9,16 +9,29 @@ export default function AddCategorie() {
   const [nom, setNom] = useState("");
   const [montant, setMontant] = useState("");
   const [loading, setLoading] = useState(false);
+  const [session, setSession] = useState<any>(null);
+
+  useEffect(() => {
+    // Récupérer la session au chargement
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+    });
+
+    // Écouter les changements d'authentification
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    setLoading(true);
     e.preventDefault();
+    setLoading(true);
 
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
-
-    if (!user) {
+    if (!session) {
       alert("Utilisateur non connecté");
       setLoading(false);
       return;
@@ -27,13 +40,17 @@ export default function AddCategorie() {
     const CategorieData = {
       nom,
       montant_limit: parseInt(montant),
-      user_id: user.id,
+      user_id: session.user.id,
     };
+
+    // Récupérer le token
+    const token = session.access_token;
 
     const res = await fetch("/api/categorie", {
       method: "POST",
       headers: {
-        "content-Type": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
       },
       body: JSON.stringify(CategorieData),
     });
@@ -44,12 +61,15 @@ export default function AddCategorie() {
       setMontant("");
       setIsOpen(false);
     } else {
-      alert("Erreur lors de l'ajout de la categorie");
+      const error = await res.json();
+      alert(`Erreur: ${error.error || "Erreur lors de l'ajout"}`);
     }
 
     setLoading(false);
   };
 
+  // ... reste du JSX identique
+}
   return (
     <>
       {/* Bouton */}
