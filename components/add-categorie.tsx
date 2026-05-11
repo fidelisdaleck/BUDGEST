@@ -31,7 +31,7 @@ export default function AddCategorie() {
 
     // Utiliser Supabase directement
     const { error } = await supabase
-      .from("categories") // Assurez-vous que le nom de la table est correct
+      .from("categories")
       .insert([CategorieData]);
 
     if (error) {
@@ -45,9 +45,7 @@ export default function AddCategorie() {
     }
 
     setLoading(false);
-  };
-
-}
+  }; // ← Ce crochet était manquant
 
   return (
     <>
@@ -89,6 +87,7 @@ export default function AddCategorie() {
                   className="border p-2 w-full rounded-lg"
                   value={nom}
                   onChange={(e) => setNom(e.target.value)}
+                  required
                 />
               </div>
 
@@ -101,6 +100,8 @@ export default function AddCategorie() {
                   className="border p-2 w-full rounded-lg"
                   value={montant}
                   onChange={(e) => setMontant(e.target.value)}
+                  required
+                  min="0"
                 />
               </div>
 
