@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { X, Plus } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
@@ -9,30 +9,16 @@ export default function AddCategorie() {
   const [nom, setNom] = useState("");
   const [montant, setMontant] = useState("");
   const [loading, setLoading] = useState(false);
-  const [session, setSession] = useState<any>(null);
-
-  useEffect(() => {
-    // Récupérer la session au chargement
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-    });
-
-    // Écouter les changements d'authentification
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-    });
-
-    return () => subscription.unsubscribe();
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    if (!session) {
-      alert("Utilisateur non connecté");
+    const { data: { user }, error: userError } = await supabase.auth.getUser();
+
+    if (userError || !user) {
+      console.error("Erreur utilisateur:", userError);
+      alert("Veuillez vous reconnecter");
       setLoading(false);
       return;
     }
@@ -40,36 +26,29 @@ export default function AddCategorie() {
     const CategorieData = {
       nom,
       montant_limit: parseInt(montant),
-      user_id: session.user.id,
+      user_id: user.id,
     };
 
-    // Récupérer le token
-    const token = session.access_token;
+    // Utiliser Supabase directement
+    const { error } = await supabase
+      .from("categories") // Assurez-vous que le nom de la table est correct
+      .insert([CategorieData]);
 
-    const res = await fetch("/api/categorie", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`,
-      },
-      body: JSON.stringify(CategorieData),
-    });
-
-    if (res.ok) {
-      alert("Categorie ajoutée avec succès");
+    if (error) {
+      console.error("Erreur Supabase:", error);
+      alert(`Erreur: ${error.message}`);
+    } else {
+      alert("Catégorie ajoutée avec succès");
       setNom("");
       setMontant("");
       setIsOpen(false);
-    } else {
-      const error = await res.json();
-      alert(`Erreur: ${error.error || "Erreur lors de l'ajout"}`);
     }
 
     setLoading(false);
   };
 
-  // ... reste du JSX identique
 }
+
   return (
     <>
       {/* Bouton */}
