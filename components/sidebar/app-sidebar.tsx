@@ -74,25 +74,19 @@ export default function AppSidebar() {
           Categories
         </Link>
         <Link
-          href="/dashboard/transaction"
-          className={navLinkClass("/dashboard/transaction")}
+          href="/dashboard/depense"
+          className={navLinkClass("/dashboard/depense")}
         >
           <ArrowLeftRight size={20} className="text-[#D7AD04]" />
-          Transactions
+          Depenses
         </Link>
-        <Link
-          href="/dashboard/exportation"
-          className={navLinkClass("/dashboard/exportation")}
-        >
-          <Download size={20} className="text-[#D7AD04]" />
-          Exportation
-        </Link>
+  
         <Link
           href="/dashboard/statistiques"
           className={navLinkClass("/dashboard/statistiques")}
         >
           <ChartLine size={20} className="text-[#D7AD04]" />
-          Statistiques
+          Statistiques & Exportation
         </Link>
         <Link
           href="/dashboard/chatbot"

@@ -1,15 +1,19 @@
 "use client"
 import {Wallet, Bus} from "lucide-react"
+import AddDepense from "@/components/add-depense";
 
 export default function Depense() {
   return (
     <div className="px-10">
-      <div className="space-y-2">
+      <div className="space-y-2 flex justify-between flex-col md:flex-row gap-3 md:gap-5">
         <div>
-          <h1 className="text-4xl text-[#333333]">Historique des transactions</h1>
+          <h1 className="text-4xl text-[#333333]">Historique des depense</h1>
           <p className="text-lg text-[#444444]">
             Consultez vos revenus et dépenses récents en un coup d&rsquo;œil.
           </p>
+        </div>
+        <div>
+          <AddDepense/>
         </div>
       </div>
       {/* Briefing de transaction */}

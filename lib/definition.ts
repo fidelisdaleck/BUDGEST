@@ -3,3 +3,10 @@ export type Profile = {
   name: string
   email: string
 }
+
+export type Categorie = {
+  id: string;
+  nom: string;
+  montant_limit: string;
+
+}

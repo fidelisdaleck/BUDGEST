@@ -41,7 +41,7 @@ export default function CategorieList() {
 
   if (loading) {
     return (
-      <p className="text-gray-500 mt-5">
+      <p className="text-gray-500 mt-5 flex-col">
         Chargement des categories...
       </p>
     );
