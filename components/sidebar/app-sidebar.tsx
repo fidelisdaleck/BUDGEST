@@ -17,7 +17,6 @@ import {
   HandCoins,
   LayoutDashboard,
   ArrowLeftRight,
-  Download,
   BotMessageSquare,
   User,
   LogOut,
